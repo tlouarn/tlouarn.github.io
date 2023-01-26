@@ -1,0 +1,59 @@
+# Using generics in Python: example of a cache
+
+In this article we will go through writing a simple cache system using Python. We will be coding in Modern Python, Python 3.10 with type hint and usage of generics.
+This article can be used as an introduction to generics.
+
+During a recent project of mine where I had to fetch data from multiple APIs, I thought of caching it locally in order not to have to rerun the batch and request remote data again in case of a fail.
+
+Let's assume I was working with an API sending me some `StockPrice` data:
+
+```python3
+from pydantic import BaseModel
+
+class Price(BaseModel):
+  ticker: str
+  price: Decimal
+```
+
+## First cache
+
+Writing a cache is fairly easy with pickle:
+
+```python3
+import pickle
+import datetime as dt
+
+class PricesCache:
+
+  def load() -> Optional[list[StockPrice]]:
+     filename = "prices_cache.pkl"
+     return pickle.load(open(filename, "rb"))
+
+  def save(prices: list[Price]) -> None:
+     filename = "prices_cache.pkl"
+     pickle.dump(open(filename, "wb"))
+```
+
+## Transforming the cache into a daily cache
+
+Now let's assume our batch runs on a daily basis. Saving all prices everyday in the same file will quickly bloat it and slow the system down. We devise a system of daily cache files and a folder structure to easily delete a folder (i.e. a day) in case something went wrong and we want to force the application to refresh the data by requesting it again from the remote source.
+
+```console
+
+
+```
+
+```python3
+import pickle
+import datetime as dt
+
+class PricesCache:
+
+  def load(date: dt.date) -> Optional[list[StockPrice]]:
+     filename = "prices_cache.pkl"
+     return pickle.load(open(filename, "rb"))
+
+  def save(prices: list[Price], date: dt.date) -> None:
+     filename = "prices_cache.pkl"
+     pickle.dump(open(filename, "wb"))
+```
