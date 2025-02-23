@@ -1,6 +1,6 @@
 ---
 title: Welcome
-layout: default
+layout: home
 ---
 
 <h3>Posts</h3>
