@@ -32,5 +32,4 @@ Validate
 this will add a new folder at the root of the repository called .github/worklows inwhich there will be jekyll-gh-pages.yml
 
 from now on: each new push to the main branch will trigger a website refresh.
-
-
+the generated html is stored by Github in a special `_site` folder that can't be accessed from the repo.
