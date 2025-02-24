@@ -4,6 +4,8 @@ tag: blockchain
 ---
 I've found myself diving into blockchain articles once again. Guilty as charged! Here are three *notes to self* I wish to remember about this technology.
 
+{:toc}
+
 # Property becomes probabilistic
 
 This is, to me, the most remarkable consequence of the Bitcoin blockchain technology.
