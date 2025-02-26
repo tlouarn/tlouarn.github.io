@@ -1,5 +1,5 @@
 ---
-title: How to create a cache in VBA
+title: A simple cache for external data in Excel
 tags: vba
 ---
 
