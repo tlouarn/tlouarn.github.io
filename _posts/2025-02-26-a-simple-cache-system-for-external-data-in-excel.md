@@ -1,5 +1,5 @@
 ---
-title: Optimizing Excel Performance: A Simple Cache System for External Data
+title: A Simple Cache System for External Data in Excel
 tags: excel vba
 ---
 
