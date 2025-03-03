@@ -9,7 +9,7 @@ If you’re in the finance industry, chances are you’ve encountered massive Ex
 
 At the core of our caching solution is a `Dictionary` object that stores the data temporarily. By defining it with Public scope, the cache will remain accessible across all functions within the spreadsheet as long as the workbook is open.
 
-```vba
+```vb
 Public CURRENCIES = New Dictionary
 ```
 This `Dictionary` will hold our external data (such as Bloomberg quotes) and prevent redundant API calls, speeding up the recalculation process.
@@ -19,7 +19,7 @@ This `Dictionary` will hold our external data (such as Bloomberg quotes) and pre
 Next, we’ll create a function that checks the cache first before making a call to Bloomberg. If the data is already in the cache, we’ll return it immediately. If not, we’ll fetch it from Bloomberg and store it in the cache for future use.
 
 
-```vba
+```vb
 Public Function GET_CURRENCY(ByVal ticker As String) As String
     Dim items As String
 
@@ -41,7 +41,7 @@ With this function, any calls to `GET_CURRENCY` will first check if the data for
 # Step 3: Clearing the Cache
 Finally, to keep the cache fresh or to troubleshoot, you might want to clear the cached data without closing the spreadsheet. Here’s a simple function to reset the cache:
 
-```vba
+```vb
 Public Function ResetCache()
     Set CURRENCIES = New Dictionary  ' Clear the cache
 End Function
