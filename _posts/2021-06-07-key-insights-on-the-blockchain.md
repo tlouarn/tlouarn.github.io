@@ -5,6 +5,7 @@ toc: true
 ---
 I've found myself diving into blockchain articles once again. Guilty as charged! Here are three *notes to self* I wish to remember about this technology.
 
+* Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
 # Property becomes probabilistic
