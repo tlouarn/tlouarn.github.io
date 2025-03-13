@@ -8,12 +8,23 @@ Target:
 - using actions (hosted linux instances on github parameterized via yml files)
 - 
 
-Getting started:
+# Getting started:
 - static website generator
 - yml format
 - github actions
-- 
 
+# Going further
+
+## How to add a table of contents:
+- add `markdown: kramdown` to `_config.yml`
+- on each post, add a dummy ordered/unordered list item followed by `{:toc}` like so
+
+```text
+* Dummy line
+{:toc}
+```
+
+This will generate an unordered table of contents.
 
 Step 1:
 
