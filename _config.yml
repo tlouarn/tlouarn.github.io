@@ -10,5 +10,7 @@ highlighter: rouge
 
 ### exclude the instructions / write-up in the README.md
 
+markdown: kramdown
+
 exclude:
 - README.md
