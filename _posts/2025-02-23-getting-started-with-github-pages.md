@@ -26,6 +26,16 @@ Target:
 
 This will generate an unordered table of contents.
 
+## How to add LaTeX equations
+
+Use MAthjax
+
+Test
+ {% raw %}
+  $$a^2 + b^2 = c^2$$ --> note that all equations between these tags will not need escaping! 
+ {% endraw %}
+
+
 Step 1:
 
 Create a new repository named {username}.github.io
