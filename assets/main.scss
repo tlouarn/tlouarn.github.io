@@ -6,9 +6,19 @@
 
 body {
     font: Helverica;
-    background-color: black;
 }
 
+
 a.site-title {
-    font-size: 200px;
-}
+    display:inline-block;
+    padding:1em 0;
+    font-weight:700;
+    letter-spacing:-.01em;
+    font-size:1.2rem
+  }
+a.site-title:first-letter {
+    margin-right:3px;
+    padding:0 7px;
+    border-radius:3px;
+    border:2px solid #000
+  }
