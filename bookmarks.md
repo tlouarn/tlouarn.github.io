@@ -1,6 +1,6 @@
 ---
 title: Bookmarks
-layout: home
+layout: page
 ---
 
 TODO: list of bookmarks

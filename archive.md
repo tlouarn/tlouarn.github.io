@@ -1,6 +1,6 @@
 ---
 title: Archive
-layout: home
+layout: page
 ---
 
 TODO: archive page

@@ -1,6 +1,6 @@
 ---
 title: Piano
-layout: home
+layout: page
 ---
 
 TODO: page about piano
