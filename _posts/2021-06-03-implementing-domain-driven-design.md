@@ -46,21 +46,20 @@ Value Objects are immutable objects where the attributes are protected by privat
 The very existence of Domain Services with logic in them could be the sign that Entities are Anemic, i.e. simple data storage objects with no logic in it, which is generally a bad practice.
 
 That being said, Domain services can be useful in specific cases:
-- When an action/computation requires several Entities: instead of choosing which Entity to place the logic in and which Entity to inject, we can choose to write the logic in a separate Domain Service in which to inject both Entities.
-- When an action requires to look into a Repository: it is generally not recommended to access a Repository from an Aggregate, but it’s okay to do so from a Domain Service.
+* When an action/computation requires several Entities: instead of choosing which Entity to place the logic in and which Entity to inject, we can choose to write the logic in a separate Domain Service in which to inject both Entities.
+* When an action requires to look into a Repository: it is generally not recommended to access a Repository from an Aggregate, but it’s okay to do so from a Domain Service.
 
 # Two types of Repositories
 
 In his original book, Eric Evans introduces the concept of Repositories as follows:
 
-> For each type of object that needs global access, create an object that can provide the illusion of an in-memory collection of all objects of > > that type.
+> For each type of object that needs global access, create an object that can provide the illusion of an in-memory collection of all objects of that type.
 >
 > Eric Evans, Domain-Driven Design: Tackling Complexity in the Heart of Software
 
 This definition, although simple and elegant, left me with an long-standing question: since Repositories are part of the Domain Layer and behave as a in-memory collection, but also simulate Persistence, to what extent should we give the Repositories a peak into the Infrastructure Layer?
 
 The answer lies in this chapter when Vaughn Vernon takes a more practical approach and distinguishes between two types of Repositories:
-
 * Collection-oriented Repositories containing the following starter methods: `add()`, `addAll()`, `remove()` and `removeAll()`
 * Persistence-oriented Repositories where the `add()` and `addAll()` methods are respectively replaced by `save()` and `saveAll()` methods
 
@@ -68,9 +67,9 @@ The answer lies in this chapter when Vaughn Vernon takes a more practical approa
 
 The theory says that Domain objects should not be aware of anything Infrastructure-related. So how do we create Domain objects in the Application Layer when their `id` is dictated by the Infrastructure Layer (typically, an autoincrement id)?
 
-The answer suggested by Vaugh Vernon is to equip our Repository with a special method called `nextIdentity()` in charge of providing the id of the next Entity to be added to the Repository:
-* if the Identity is decided by the Application Layer (for instance a GUID), then the implementation of this method will return a GUID
-* if the Identity is decided by the database (autoincrement id), then the implementation of this method will run a quick query to the database to get the next autoincrement id.
+The answer suggested by Vaugh Vernon is to equip the abstract Repository with a special method called `nextIdentity()` in charge of providing the id of the next Entity to be added to the Repository:
+* if the identity is decided by the Application Layer (for instance a GUID), then the implementation of this method will return a GUID
+* if the identity is decided by the database (autoincrement id), then the implementation of this method will run a quick query to the database to get the next autoincrement id
 
 # Final thoughts
 
@@ -78,4 +77,4 @@ The above notes are only a very partial and personal summary of all the concepts
 
 Also, the Author adds detailed testing strategies along with most explanations and implementations of concepts, which will prove quite useful to the practitioner (e.g. how to test Value Objects, Repositories etc.).
 
-Overall, the book was a good read that I would definitely recommend to intermediate software developers, Java or not.
+Overall, the book was a good read and I definitely recommend it to intermediate software developers, Java or not.
