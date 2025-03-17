@@ -13,56 +13,33 @@ This post gathers some reading notes.
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-# Book chapters
-
-The book is organised as follows:
-
-1. Getting started with DDD
-2. Domains, Subdomains, and Bounded Contexts
-3. Context Maps
-4. Architecture
-5. Entities
-6. Value Objects
-7. Services
-8. Domain Events
-9. Modules
-10. Aggregates
-11. Factories
-12. Repositories
-13. Integrating Bounded Contexts
-14. Application
-
 # Strategic Modeling vs Tactical Modeling
 
 * **Strategic Modeling** is an abstraction exercise where software engineers and domain experts gather and study the terminology used in a given Domain in order to uncover different Bounded Contexts, each Context having its own Ubiquitous Language.
 
-* By opposition, **Tactical Modeling** relies on a series of common coding recipes that could prove useful in implementing DDD. Typical recipes include Entities, Value Objects, Aggregates, Repositories etc. Using these coding patterns does not guarantee that the overall project will be properly modeled, but properly modelling the project will likely result in using these coding patterns.
+* By opposition, **Tactical Modeling** relies on a series of common coding recipes that could prove useful in implementing DDD. Typical recipes include Entities, Value Objects, Aggregates, Repositories etc. Using these coding patterns does not guarantee that the overall project will be properly modeled, but properly modeling the project will likely result in using these coding patterns.
 
 # Terminology matters
 
-* In Philosophy, a good starting point when writing an essay is to look at the etymology of the very words used in the topic and, from there, explore the spectrum of their meaning and gain insight on the relationships between concepts.
+* In Philosophy, a good starting point when writing an essay is to look at the etymology of the very words used in the subject and, from there, explore the spectrum of their meanings and gain insight on the relationships between concepts.
 
-* DDD follows the same approach: by focusing extensively on the words used in a given Domain, the hope is to also discover how the concepts interact together and use this as a foundation on which to write the actual code.
-
-* In this respect, one can see software engineers as modern-days Socrates asking questions to Domain experts in order to extract and model the knowledge.
+* DDD follows the same approach: by focusing extensively on the words used in a given Domain, the hope is to also discover how the concepts interact together and use this as a foundation on which to write the actual code. In this respect, one can see software engineers as modern-days Socrates asking questions to Domain experts in order to extract and model their knowledge.
 
 # Bounded Contexts
 
-It’s okay to model the same concept using different objects in different Bounded Contexts.
+It’s okay to model the same concept using different objects as part of different Bounded Contexts.
 
-Taking the example of a book:
+Taking the example of a book (this is my example, for illustration only):
 
-In the Bounded Context of a creative writing software, a book is barely more than a collection of Ideas and a TentativeTitle.
-In the Bounded Context of a publisher’s database, a book could be modeled as a structured object with different types of Content including a Preface and a BackCover as well as references to the people who helped finalize it.
-In the Bounded Context of an online retailer, the emphasis would be put on the Price, the ShippingCost, the number of units in Stock and potential Reviews.
+* In the Bounded Context of a creative writing software, a book could be modeled as a collection of ideas and a temporary title
+* In the Bounded Context of a publisher’s database, a book could be modeled as a structured object with different types of content including a preface and a back cover as well as references to the people who helped finalize it
+* In the Bounded Context of an online retailer, the emphasis would be put on the price, the shipping cost, the number of units in stock and a collection of customer reviews
 
 In all three cases it’s still a book, but seen through different Contexts and therefore modeled differently.
 
 # Immutability of Value Objects
 
-Value Objects are immutable objects where the attributes are protected by private setters and are validated and set by the constructor once and for all. Therefore the very existence of a Value Object guarantees that it is valid, which makes it much easier to rely on and to manipulate.
-
-Sidenote: in Python, Value Objects would be either built-in immutable data types (`bool`, `int`, `float`, `tuple`, `str` and `frozenset`) or custom objects. The issue with custom objets is that there is no such thing as true private methods in Python. All there is is the coding convention of prefixing the method name with an underscore to signal to other developers that the method *should not* be accessed directly. The other issue is that equality would default to a referene identity where what we want is an identity by value. To do so, you would need to overwrite the `__eq__` dunder method of the custom object in order to test the equality by only looking at the values of the attributes. 
+Value Objects are immutable objects where the attributes are protected by private setters and are validated and set by the constructor once and for all. Therefore the very existence of a Value Object guarantees that it is valid, which makes it much easier to rely on and to manipulate within the Application Layer.
 
 # When to use Domain Services
 
@@ -71,8 +48,6 @@ The very existence of Domain Services with logic in them could be the sign that 
 That being said, Domain services can be useful in specific cases:
 - When an action/computation requires several Entities: instead of choosing which Entity to place the logic in and which Entity to inject, we can choose to write the logic in a separate Domain Service in which to inject both Entities.
 - When an action requires to look into a Repository: it is generally not recommended to access a Repository from an Aggregate, but it’s okay to do so from a Domain Service.
-
-Sidenote: in Python, a class with static methods is usually the implementation of choice for a Domain Service.
 
 # Two types of Repositories
 
@@ -88,8 +63,6 @@ The answer lies in this chapter when Vaughn Vernon takes a more practical approa
 
 * Collection-oriented Repositories containing the following starter methods: `add()`, `addAll()`, `remove()` and `removeAll()`
 * Persistence-oriented Repositories where the `add()` and `addAll()` methods are respectively replaced by `save()` and `saveAll()` methods
-
-Sidenote: in Python, a Collection-oriented Repository would be a simple dict (or a custom wrapper around a dict) whereas a Persistence-oriented Repository would contain database queries either directly or through an ORM.
 
 # Unique identity generated from Persistence Layer
 
