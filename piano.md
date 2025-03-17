@@ -21,7 +21,7 @@ https://open.spotify.com/album/2pyNgXQoPdDvt8OCinixBw?si=vv98ufVBTDaE-y_cVUNNJA
 # Schubert - Four Impromptus Op. 90 D 899
 
 | Piece | Interpret |  Label | Year | Link |
-| --- | --- |--- |--- |--- |
+| --- | --- |--- |--- | --- |
 | Impromptu No. 1 in C Minor | Krystian Zimerman | Deutsche Grammophon | 1991 | [Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj) |
 | Impromptu No. 2 in E-Flat Major| Krystian Zimerman | Deutsche Grammophon |1991 | [Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj) |
 | Impromptu No. 3 in G-Flat Major | Krystian Zimerman | Deutsche Grammophon | 1991 | [Spotify](https://open.spotify.com/track/29MPCaJXtOFrsaG8ZnYfOQ) |
@@ -30,8 +30,9 @@ https://open.spotify.com/album/2pyNgXQoPdDvt8OCinixBw?si=vv98ufVBTDaE-y_cVUNNJA
 # Chopin - Nocturnes
 
 # Chopin - Preludes
+
 | Piece | Interpret |  Label | Year | Link |
-| --- | --- |--- |--- |--- |
+| --- | --- |--- |--- | --- |
 | Prélude No. 1 C-Dur | Martha Argerich | Deutsche Grammophon | 1977 | [Spotify](https://open.spotify.com/track/5lBrZri8OR3UMqWjdof0E8) |
 | Prélude No. 2 A-Moll | Martha Argerich | Deutsche Grammophon | 1977 |  [Spotify](https://open.spotify.com/track/50uHFlRGf69DM79HQ5iPNu) |
 | Prélude No. 3 G-Dur | Martha Argerich | Deutsche Grammophon | 1977 |  [Spotify](https://open.spotify.com/track/) |
