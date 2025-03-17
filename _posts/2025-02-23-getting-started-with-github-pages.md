@@ -80,3 +80,11 @@ Also, in case GitHub decides to upgrade the default version of minima theme at a
 
 Adding KaTeX.
 - add a custom katex.html with the scrips
+- katex expressions need to be escaped using `\\[` and `\\]`
+
+```md
+Put-Call Parity:
+
+\\[ C - P= D \cdot (F - K) \\]
+
+```
