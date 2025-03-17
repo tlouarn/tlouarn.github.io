@@ -72,3 +72,11 @@ body {
 }
 
 ```
+
+I like to separate content from presentation. Therefore the cleanest way was to fork minima to a custom repo `tlouarn/minima`.
+From there, I could edit the styles. Fork and then strip all unnecessary files.
+The content remains on `tlouarn.github.io` (`_config.yml`, posts and pages) and the theme stays in `tlouarn/minima` where it is easier to customize.
+Also, in case GitHub decides to upgrade the default version of minima theme at a later stage, my website won't break. Insulated from future upgrades of the default minima theme.
+
+Adding KaTeX.
+- add a custom katex.html with the scrips
