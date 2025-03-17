@@ -20,8 +20,8 @@ https://open.spotify.com/album/2pyNgXQoPdDvt8OCinixBw?si=vv98ufVBTDaE-y_cVUNNJA
 
 # Schubert - Four Impromptus Op. 90 D 899
 
-Piece | Interpret | Year | Label | Link |
- | --- | --- |--- |--- |--- |
+| Piece | Interpret | Year | Label | Link |
+| --- | --- |--- |--- |--- |
 | Impromptu No. 1 in C Minor | Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj) |
  Impromptu No. 2 in E-Flat Major| Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj) |
  Impromptu No. 3 in G-Flat Major | Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/29MPCaJXtOFrsaG8ZnYfOQ) |
