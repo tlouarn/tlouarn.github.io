@@ -1,15 +1,5 @@
-### your site title here
-
 title: tlouarn
-
-
-### let's use the minima theme (see https://github.com/jekyll/minima)
-
 remote_theme: tlouarn/minima
-
-### exclude the instructions / write-up in the README.md
-
 markdown: kramdown
-
 exclude:
 - README.md
