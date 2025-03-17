@@ -63,7 +63,7 @@ Once your developer account has been validated, you should see the prompts for a
 
 Right after you chose your app name, you will be presented with your keys and tokens like below:
 
-[Keys and tokens](/assets/images/getting-started-with-tweepy-keys-and-tokens.png)
+![Keys and tokens](/assets/images/getting-started-with-tweepy-keys-and-tokens.png)
 
 Please save them somewhere secure, and once that’s done, save them again. This is the only time you will ever see them. The API Key and API Secret Key (also known as Consumer Keys) will authenticate the app itself with OAuth 1.0a. The Bearer Token can be used with OAuth 2.0 but we will not use it in this tutorial.
 
@@ -73,11 +73,11 @@ Just before we generate the access tokens, we need to give Read and Write access
 
 From the main Settings page, find the App permissions section and click on Edit:
 
-[Edit app permissions](/assets/images/getting-started-with-tweepy-edit-app-permissions.png)
+![Edit app permissions](/assets/images/getting-started-with-tweepy-edit-app-permissions.png)
 
 Then select “Read and Write”:
 
-[Change pp permissions to Read and Write](/assets/images/getting-started-with-tweepy-app-permissions-read-and-write.png)
+![Change pp permissions to Read and Write](/assets/images/getting-started-with-tweepy-app-permissions-read-and-write.png)
 
 Once this is done, go back to the Keys and tokens page and generate your Access Token and Secret. You know the drill: save them somewhere secure, and once this is done, save them again. Since we gave Read and Write permissions to our app prior to generating the Access Token and Secret, we will be able to post tweets using the API.
 
