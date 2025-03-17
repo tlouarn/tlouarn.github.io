@@ -3,9 +3,18 @@ title: Key insights on the blockchain
 tag: blockchain
 toc: true
 ---
+<<<<<<< HEAD
+
+
+
+
+=======
 ![846e4f4d-1664-462b-8acd-7268755df8a2](https://github.com/user-attachments/assets/45275135-24ee-4624-897a-166cc4dae2b3)
 
+>>>>>>> 8a922856c1268811ca9a6b50a16d88c7e238ea2a
 I've found myself diving into blockchain articles once again. Guilty as charged! Here are three *notes to self* I wish to remember about this technology.
+
+
 
 
 * Will be replaced with the ToC, excluding the "Contents" header
