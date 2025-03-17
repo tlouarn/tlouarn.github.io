@@ -6,7 +6,6 @@ title: tlouarn
 ### let's use the minima theme (see https://github.com/jekyll/minima)
 
 remote_theme: tlouarn/minima
-highlighter: rouge
 
 ### exclude the instructions / write-up in the README.md
 
