@@ -20,12 +20,12 @@ https://open.spotify.com/album/2pyNgXQoPdDvt8OCinixBw?si=vv98ufVBTDaE-y_cVUNNJA
 
 # Schubert - Four Impromptus Op. 90 D 899
 
-| Composer | Reference | Piece | Interpret | Year | Label | Link |
-| --- | --- | --- | --- |--- |--- |--- |
-| Schubert | D.899 | Impromptu No. 1 in C Minor | Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj) |
-| Schubert | D.899 | Impromptu No. 2 in E-Flat Major| Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj) |
-| Schubert | D.899 | Impromptu No. 3 in G-Flat Major | Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/29MPCaJXtOFrsaG8ZnYfOQ) |
-| Schubert | D.899 | Impromptu No. 4 in A-Flat Major | Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/35d13DSF2nu9rO3xSfyIIS) |
+Piece | Interpret | Year | Label | Link |
+ | --- | --- |--- |--- |--- |
+| Impromptu No. 1 in C Minor | Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj) |
+ Impromptu No. 2 in E-Flat Major| Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj) |
+ Impromptu No. 3 in G-Flat Major | Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/29MPCaJXtOFrsaG8ZnYfOQ) |
+Impromptu No. 4 in A-Flat Major | Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/35d13DSF2nu9rO3xSfyIIS) |
 
 
 
