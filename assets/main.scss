@@ -6,7 +6,7 @@
 
 body {
     font-family: Helvetica,Arial,sans-serif;
-    letter-spacing:  -1px;
+   
 }
 
 
@@ -25,4 +25,8 @@ a.site-title:first-letter {
   }
 a.site-title:hover {
   text-decoration: none;
+}
+
+h1,h2,h3 {
+  letter-spacing:  -1px;
 }
