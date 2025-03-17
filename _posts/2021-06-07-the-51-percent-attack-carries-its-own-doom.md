@@ -1,6 +1,6 @@
 ---
 title: The 51% attack carries its own doom
-tag: blockchain
+tags: blockchain
 ---
 
 ![Illustration](/assets/images/2021-06-07-the-51-percent-attack-carries-its-own-doom.jpg)
