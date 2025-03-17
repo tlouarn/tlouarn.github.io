@@ -20,12 +20,18 @@ https://open.spotify.com/album/2pyNgXQoPdDvt8OCinixBw?si=vv98ufVBTDaE-y_cVUNNJA
 
 # Schubert - Four Impromptus Op. 90 D 899
 
-| Piece | Link |
-| --- | --- | --- | --- |
-| Op.90 D.899 No. 1 in C Minor | [Link to Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj?si=f415bffb9c034cc7) |
-| Op.90 D.899 No. 2 in E-Flat Major | [Link to Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj?si=f415bffb9c034cc7) |
-| Op.90 D.899 No. 3 in G-Flat Major | [Link to Spotify](https://open.spotify.com/track/29MPCaJXtOFrsaG8ZnYfOQ?si=c4dcf556198143bf) |
-| Op.90 D.899 No. 4 in A-Flat Major | [Link to Spotify](https://open.spotify.com/track/35d13DSF2nu9rO3xSfyIIS?si=efdd9dddd5fd45b0) |
+| Composer | Reference | Piece | Interpret | Year | Label | Link |
+| --- | --- | --- | --- |--- |--- |--- |
+| Schubert | D.899 | Impromptu No. 1 in C Minor | Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj) |
+| Schubert | D.899 | Impromptu No. 2 in E-Flat Major| Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/3eYCxRLFTZZgW95CMPQQVj) |
+| Schubert | D.899 | Impromptu No. 3 in G-Flat Major | Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/29MPCaJXtOFrsaG8ZnYfOQ) |
+| Schubert | D.899 | Impromptu No. 4 in A-Flat Major | Krystian Zimerman | 1991 | Deutsche Grammophon  | [Spotify](https://open.spotify.com/track/35d13DSF2nu9rO3xSfyIIS) |
 
 
 
+# Chopin - Nocturnes
+
+# Chopin - Preludes
+
+
+# Schubert - Fantaisie iN F Minor
