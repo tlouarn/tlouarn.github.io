@@ -54,3 +54,21 @@ this will add a new folder at the root of the repository called .github/worklows
 
 from now on: each new push to the main branch will trigger a website refresh.
 the generated html is stored by Github in a special `_site` folder that can't be accessed from the repo.
+
+## How to customize CSS
+
+GitHub Pages currently runs on minima v2.5.1. In order to overwrite or add custom css, the easiest way is to create `assets/main.scss` and import the minima style inside:
+
+```scss
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+body {
+    font: Helvetica,Arial,sans-serif;
+    letter-spacing:  -1px;
+}
+
+```
