@@ -1,5 +1,10 @@
 title: tlouarn
+description: >
+  I write about programming, software engineering, quantitative finance and blockchain. 
+
 remote_theme: tlouarn/minima
+
 markdown: kramdown
+
 exclude:
 - README.md
