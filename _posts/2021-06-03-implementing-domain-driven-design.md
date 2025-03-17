@@ -4,7 +4,7 @@ tag: DDD, Python
 toc: true
 ---
 
-![Implementing Domain-Driven Design](assets/images/2021-06-03-implementing-domain-driven-design.jpg)
+![Implementing Domain-Driven Design](/assets/images/2021-06-03-implementing-domain-driven-design.jpg)
 
 Commonly referred to as the “Red Book of DDD”, Implementing Domain-Driven Design tackles practical implementations of the Domain-Driven approach to software engineering. Since the clearest way to expain coding principles is actual code, and DDD code being particularly clear, it makes for an excellent reading experience.
 
