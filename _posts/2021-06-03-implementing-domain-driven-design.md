@@ -4,6 +4,8 @@ tag: DDD, Python
 toc: true
 ---
 
+![818NkFvZy4L _SL1500_](https://github.com/user-attachments/assets/0cca4756-5820-44b2-a43f-24cd5206cb57)
+
 Commonly referred to as the “Red Book of DDD”, Implementing Domain-Driven Design tackles practical implementations of the Domain-Driven approach to software engineering. Since the clearest way to expain coding principles is actual code, and DDD code being particularly clear, it makes for an excellent reading experience.
 
 The programming language used throughout the book is Java. This could have been a barrier to entry given my Python background, but it turned out to be relatively easy to grasp. Il also made for a very refreshing experience to be reading well-organized code in a statically-typed language.
