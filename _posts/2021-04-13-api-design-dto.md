@@ -24,7 +24,7 @@ There are multiple usages to a DTO:
 * reduce expensive remote calls: in the definition given by Martin Fowler, DTOs are here to reduce the number of remote calls by grouping the requested data in a single call
 * remove sensitive data from the Domain object: in our example, the actual trade resource on the server-side may contain other fields that should not be exposed via the API, so what we see coming from the API is likely to be a minimal representation of the actual Domain trade object
 
-# DTO implementationin Python
+# DTO implementation in Python
 
 Let’s implement our `Trade` class. You will note that:
 
