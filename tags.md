@@ -3,35 +3,10 @@ title: Tags
 layout: home
 ---
 
-<h3>Tags</h3>
-<ul>
-  {% for post in posts limit:5 %}
-    <li><a href="{{ post.url }}">{{ post.date | date: "%B %Y" }} - {{ post.title }}</a></li>
-  {% endfor %}
-</ul>
 
-<form action="/search.html" method="get">
-  <label for="search-box">Search</label>
-  <input type="text" id="search-box" name="query">
-  <input type="submit" value="search">
-</form>
+{% for tag in site.tags %}
 
-<ul id="search-results"></ul>
+    <a href="/tags#{{ tag }}" class="tag">{{ tag }}</a> |
 
-<script>
-  window.store = {
-    {% for post in site.posts %}
-      "{{ post.url | slugify }}": {
-        "title": "{{ post.title | xml_escape }}",
-        "author": "{{ post.author | xml_escape }}",
-        "category": "{{ post.category | xml_escape }}",
-        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ post.url | xml_escape }}"
-      }
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  };
-</script>
-<script src="/js/lunr.min.js"></script>
-<script src="/js/search.js"></script>
+{% endfor %}
 
