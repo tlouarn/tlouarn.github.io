@@ -3,17 +3,14 @@ title: API Design - Authentication
 tags: api, python
 ---
 
-So far we have assumed that the ETPS API was unprotected. This is highly unlikely, especially in a financial environment.
+In this post we will go through the OAuth 2 protocol and see how we can implement authentication in a Python wrapper. OAuth 2 defines several types of authorization flows, but for simplicity we will focus on the **Client Credentials** flow.
 
-In this post we will go through a quick reminder of the OAuth 2 protocol and see how we can implement authentication in our Python wrapper. OAuth 2 defines several types of authorization flows, but for simplicity we will focus on the Client Credentials flow.
+# Client Credentials
 
-The implementations presented in this post are NOT reproduced on the GitHub repo in order to keep a readable and easily testable code.
+We assume a User wants to programmatically access a protected Resource via a Client.
 
-# OAuth 2: client credentials
-
-Below is a high-level summary of the OAuth 2 protocol for a Client Credentials flow. We assume a User wants to programmatically access a protected Resource via a Client.
-
-Without OAuth, the Resource server would need to handle the User authentication and the User would likely have to send its username/password with each request. On the contrary, OAuth decouples the process by splitting the Auth server apart from the Resource server.
+* Without OAuth, the Resource server would need to handle the User authentication and the User would likely have to send its username and password with each request
+* With OAuth, the process is decomposed between an Auth server and a Resource server
 
 Some time before, the User asks the Resource owner (for instance, the team who developped the API) for access to specific scopes. We can assume the creators of ETPS API have created a trades.read scope protecting the GET method and a trades.write scope protecting the POST and DELETE methods. This is a one-off process.
 
@@ -125,3 +122,10 @@ trade = etps.get_trade(trade_id)
 ```
 
 Obviously, the final application using our library would not expose client_id and client_secret in the code. These credentials would likely be safely stored in a Vault.
+
+
+Using Environmnent variables.
+
+
+Last but not least, it's best practice to keep the keys as environment variables. Do not include them in your code. The classic library for this is `python-dotenv` which can read key-value pairs from a `.env` file located at the root of the project.
+

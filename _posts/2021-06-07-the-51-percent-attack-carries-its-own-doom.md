@@ -7,9 +7,9 @@ tags: blockchain
 
 The blockchain lives thanks to an army of nodes validating transactions and building blocks.
 
-The majority of these nodes are honest in the sense that they only validate legitimate transactions by checking that the bitcoins spent by a given address were previously received by said address. But some nodes could be malicious and insert illegitimate transactions into the blocks to their own benefit.
+The majority of these nodes are honest in the sense that they only validate legitimate transactions by checking that the bitcoins spent by a given address were previously received by said address. But some nodes could be malicious and insert illegitimate transactions into the blocks for their own benefit.
 
-In order to profit from these malicious transactions, the malicious nodes would then need to win consensus, which means to broadcast the altered blockchain and have it accepted by the rest of the network. Since the majority of other nodes are honest, the altered version of the blockchain would immediately be rejected, and the malicious nodes would only be owning illegitimate bitcoins in their own branch of the blockchain like kings in their own world.
+Then, the malicious nodes would need to win consensus, which means to broadcast the altered blockchain and have it accepted by the rest of the network. Since the majority of other nodes are honest, the altered version of the blockchain would immediately be rejected, and the malicious nodes would only be owning illegitimate bitcoins in their own branch of the blockchain like kings in their own world.
 
 The only way to win the consensus is the control the network, which boils down to controlling the hash rate, i.e. controlling more than 50% of the total available computing power plugged to the network. This is known as the 51% attack.
 

@@ -1,5 +1,5 @@
 ---
-title: A Pythonic API wrapper - Introduction
+title: API Design - Introduction
 tags: python, api
 ---
 
