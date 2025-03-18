@@ -1,5 +1,6 @@
 ---
 Title: Getting started with Github pages
+Tags: howto, web
 ---
 
 Target:

@@ -1,6 +1,6 @@
 ---
 title: A Simple Cache System for External Data in Excel
-tags: excel vba
+tags: excel, vba
 ---
 
 If you’re in the finance industry, chances are you’ve encountered massive Excel workbooks that rely on external data sources—such as Bloomberg—to feed into complex pricing models. These spreadsheets are often full of volatile functions, causing slow recalculation times that can be a real productivity killer. In this post, I’ll walk you through how to set up a simple cache system for Bloomberg data in Excel, reducing the number of external calls and dramatically improving the performance of your worksheet.
