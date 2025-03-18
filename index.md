@@ -3,9 +3,9 @@ title: Welcome
 layout: home
 ---
 
-<h3>Posts</h3>
+<h3>Archive</h3>
 <ul>
-  {% for post in posts] %}
+  {% for post in posts limit:5 %}
     <li><a href="{{ post.url }}">{{ post.date | date: "%B %Y" }} - {{ post.title }}</a></li>
   {% endfor %}
 </ul>

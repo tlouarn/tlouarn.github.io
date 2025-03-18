@@ -37,7 +37,6 @@ GET /trades/:id
 
 Path parameters:
 
-
 | Name | Type | Description |
 | --- | --- | --- |
 |id  | string | Unique identifier of the trade to request. Format: UUID v4. Required |
@@ -64,3 +63,23 @@ Response fields:
 |currency |	string |	Name of the currency. Format: ISO 4217|
 |tradeDate |	string |	Trade Date. Format: YYYY-MM-DD|
 |valueDate |	string |	Value Date. Format: YYYY-MM-DD|
+
+Query example:
+
+```curl
+GET /trades/d76f36f0-cbdc-4481-9a46-36837d1847da
+```
+Response body example (JSON):
+
+```json
+'{
+    "id": "d76f36f0-cbdc-4481-9a46-36837d1847da",
+    "way": "BUY",
+    "stock": "AAPL US",
+    "quantity": 54123,
+    "price": "127.79",
+    "currency": "USD",
+    "tradeDate": "2021-03-01",
+    "valueDate": "2021-03-03"
+}'
+```
