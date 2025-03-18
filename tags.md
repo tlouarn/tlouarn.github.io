@@ -1,6 +1,6 @@
 ---
 title: Tags
-layout: home
+layout: page
 ---
 
 
