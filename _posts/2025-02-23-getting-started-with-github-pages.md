@@ -84,8 +84,9 @@ Adding KaTeX.
 - katex expressions need to be escaped using `\\[` and `\\]`
 
 ```md
-Put-Call Parity:
+\\[ C - P= D \cdot (F - K) \\]
+```
+
+Which is rendered as:
 
 \\[ C - P= D \cdot (F - K) \\]
-
-```

@@ -1,6 +1,6 @@
 ---
-Title: A Pythonic API wrapper - Introduction
-Tags: python, api
+title: A Pythonic API wrapper - Introduction
+tags: python, api
 ---
 
 In order to programmatically extract data from a system, we need an API of some sort. It can be as simple as a flat file with well-defined column names dumped by an overnight batch, or as sophisticated as an on-demand web service with specific access methods.
@@ -12,14 +12,11 @@ All the source code is available on [my GitHub](https://github.com/tlouarn/blog-
 
 # Introducing ETPS
 
-In order to show practical examples, we will imagine a legacy trade booking system named ETPS (for Equity Trades Processing System).
-
-This system has a newly released REST API exposing the trades resource and we will be in charge of writing the Python wrapper around this API.
+In order to show practical examples, we will imagine a legacy trade booking system named ETPS (for Equity Trades Processing System). This system has a newly released REST API exposing the trades resource and we will be in charge of writing the Python wrapper around this API.
 
 # A lightweight wrapper
 
 We basically want our wrapper to:
-
 - handle network requests
 - handle pagination
 - require a unique import
@@ -37,7 +34,7 @@ from etps import ETPSWrapper, TradeToBookDTO
 etps = ETPSWrapper()
 
 # Retrieve a trade knowing trade_id
-trade_id = ...
+trade_id = "XXX"
 trade = etps.get_trade(trade_id)
 
 # Book a new trade
