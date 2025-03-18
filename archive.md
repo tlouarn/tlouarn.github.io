@@ -3,10 +3,8 @@ title: Archive
 layout: page
 ---
 
-All posts ordered by reverse chronological order.
-
 <ul>
-  {% for post in posts %}
-    <li><a href="{{ post.url }}">{{ post.date | date: "%B %Y" }} - {{ post.title }}</a></li>
+  {% for post in site.posts %}
+    <li>{{ post.date | date: "%B %Y" }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
