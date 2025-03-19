@@ -5,6 +5,8 @@ tags: blockchain
 
 ![Illustration](/assets/images/2021-06-07-the-51-percent-attack-carries-its-own-doom.jpg)
 
+Doom article. So far we have considered that all the nodes in the network were honest. 
+
 The blockchain lives thanks to an army of nodes validating transactions and building blocks.
 
 The majority of these nodes are honest in the sense that they only validate legitimate transactions by checking that the bitcoins spent by a given address were previously received by said address. But some nodes could be malicious and insert illegitimate transactions into the blocks for their own benefit.
