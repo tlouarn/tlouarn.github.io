@@ -5,7 +5,7 @@ tag: blockchain
 
 In a traditional setup, dubbed TradFi, the proof of property is **centralized** and **deterministic**. 
 
-For instance, if you have a bank account at Barclays with one GBP on it, only Barclays can validate that you own one GBP (it is centralized) but when it does, it guarantees that you own this amount (it is deterministic). There is only one version of the truth and this truth is certain.
+For instance, if you have a bank account with one GBP in it, only the bank can validate that you own the one GBP (it is centralized) but when it does, it guarantees that you own this amount (it is deterministic). There is only one version of the truth and this truth is certain.
 
 On the blockchain however, the proof of property is **decentralized** and **probabilistic**. 
 
