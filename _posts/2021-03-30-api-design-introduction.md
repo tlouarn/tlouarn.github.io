@@ -1,6 +1,6 @@
 ---
 title: API Design - Introduction
-tags: python, api
+tags: python api
 ---
 
 In order to programmatically extract data from a system, we need an API of some sort. It can be as simple as a flat file with well-defined column names dumped by an overnight batch, or as sophisticated as an on-demand web service with specific access methods.

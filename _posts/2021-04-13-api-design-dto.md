@@ -1,6 +1,6 @@
 ---
 title: API Design - Data Transfer Objects
-tags: api, python
+tags: api python
 ---
 
 Python offers a wide choice of data structures. We could for instance have our wrapper return the trade information from the API as a `dictionary` or a `namedtuple`. This approach works for simple scripts, but for enterprise grade applications we prefer to build custom objects.

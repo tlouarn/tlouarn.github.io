@@ -1,6 +1,6 @@
 ---
 title: API Design - Pagination
-tags: api, python
+tags: api python
 ---
 
 Sometimes the results returned by the API need to be split into several blocks. Enters pagination.

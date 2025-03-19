@@ -1,6 +1,6 @@
 ---
 title: API Design - Python wrapper
-tags: api, python
+tags: api python
 ---
 
 Our wrapper class will contain four methods, each one representing an API functionality. 

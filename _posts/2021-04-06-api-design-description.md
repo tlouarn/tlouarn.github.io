@@ -1,6 +1,6 @@
 ---
 title: API Design - Description
-tags: api, python
+tags: api python
 ---
 
 API stands for **A**pplication **P**rogramming **I**nterface. It's basically words on paper describing how systems should interact together. The API is then implemented with code that tries to behave like described in the Interface as best as possible.

@@ -1,6 +1,6 @@
 ---
 title: API Design - Authentication
-tags: api, python
+tags: api python
 ---
 
 In this post we will go through the OAuth 2 protocol and see how we can implement authentication in a Python wrapper. OAuth 2 defines several types of authorization flows, but for simplicity we will focus on the **Client Credentials** flow.

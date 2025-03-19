@@ -1,6 +1,6 @@
 ---
 title: Getting started with tweepy
-tags: python, api
+tags: python api
 ---
 
 In this article I will get you setup and ready to go with the Twitter API using Python in 8 steps:
