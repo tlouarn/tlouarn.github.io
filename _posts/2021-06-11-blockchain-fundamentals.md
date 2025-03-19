@@ -27,13 +27,14 @@ text = b"Hello World"
 hash_value = sha256(text).hexdigest()
 
 print(hash_value)
+>>> "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e"
 ```
 
-The hash value of the string "Hello World" is `a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e`. You can run the code on your side and you will find the exact same output. The hash function is **deterministic**: the same input will always give the same output.
+You can run the code on your side and you will find the exact same output. The hash function is **deterministic**: the same input will always give the same output.
 
-SHA-256 is an asymetric hash function, which means: given the input "Hello World", it can quickly compute the corresponding hash. But given a hash, it cannot recompute the original input. There is no such function as `sha256_reverse()`. We say that the hash function is **non-reversible**. The only way to try to find the input for a given output is to try all the possible inputs one by one, which is infinite.
+SHA-256 is an asymetric hash function, which means: given the input "Hello World", it can quickly compute the corresponding hash. But given a hash, it cannot recompute the original input. There is no such function as `sha256_reverse()`. We say that the hash function is **non-reversible** or **one-way**. The only way to try to find the input for a given output is to try all the possible inputs one by one, which is infinite.
 
-Now let's slightly amend the input, for instance by adding an underscore between the two words. If you run the code again, you will realize the output is radically different. Still the same length, obviously, but a completely different sequence of characters. This is the **avalanche effect**: similar but not identital inputs should produce radically different outputs. A good hash function generates an output which is statistically indistinguishable from random. We can't predict what the output will be, the only way to know the output of a given input is to run the function.
+Now let's slightly amend the input, for instance by adding an underscore between the two words. If you run the code again, you will realize the output is radically different. Still the same length, obviously, but a completely different sequence of characters. This is the **avalanche effect**: similar but not identital inputs should produce radically different outputs. A good hash function generates an output which is statistically indistinguishable from random.
 
 Now if we can't predict the outputs, and if the number of possible inputs is infinite, how can we be so sure that there are no two inputs somewhere that have nothing in common except that, against all odds, they generate the same output? Simple answer: we don't. Such inputs would create a **collision**. We assume the hash functions we use are **collision-resistant** but there is no way to formally prove it.
 
@@ -43,6 +44,8 @@ To summarize, a hash function is:
 * collision-resistant
 * avalanche
 * fast
+
+uniform distribution of hash values across the output space to avoid clustering
 
 
 # Public/Private keys
