@@ -31,9 +31,23 @@ A **semiprime** number is the product of exactly two prime numbers, which may or
 
 Two numbers are **coprime** if they have no other common factor than 1. They don't need to be prime numbers themselves. For instance: 3 and 10 are coprime (3 is prime and there is no integer i such that 3 * i = 10). But 5 and 20 are not coprime since 5 * 4 = 20.
 
+Consider a 12-hour clock. Both 3AM and 3PM have the same position. We say that 15 is congruent to 3 modulo 12, meaning that:
+* both 15 mod 12 and 3 mod 12 yield the same result (3) -> they have the same remainders when divided by 12
+* 12 is a divisor of their difference (15 - 3 = 12, which is a multiple of 12)
+
+15 and 3 are not equal in standard arithmetic but fall in the same group in modular arithmetic -> they are equivalent within a modular system. 
+
+Fermat's **little theorem** states that if p is a prime number, then for any integer a, the number a ** p - a is a multiple of p. In modular arithmetic this is written as:
+
+\\[ a^p \equiv a (mod p) \\]
+
+In the case where a is coprime to p, the statement becomes:
+
+\\[ a^(p-1) \equiv 1 (mod p) \\]
+
 Euler's totient function counts the positive integers up to a given n that are coprime with n. We denote this function as:
 
-\[[ \phi(n) ]]
+\\[ \phi(n) \\]
 
 * if n is prime, phi(n) = n - 1 (i.e. all numbers up to n are coprime with n since n is prime)
 * if n is semiprime and product of primes p and q, phi(n) = (p-1) * (q-1)
@@ -45,6 +59,11 @@ Some examples:
 **Congruence** is defined as: a≡b(modn)a≡b(modn) means that a and b have the same remainder when divided by nn. In other words, a and b are congruent modulo n. The two numbers are "equivalent" in some modular system.
 
 Euler's Theorem: if a and n are coprime then a ** phi(n) ≡ 1 mod n
+
+\\[ a ^ \phi(n) \equiv 1 (mod n) \\]
+
+Indeed, Fermat's Little Theorem is a special case since if n is a prime number then phi(n) = n - 1.
+
 
 # RSA encryption
 
