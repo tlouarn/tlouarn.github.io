@@ -30,6 +30,8 @@ https://stackoverflow.com/questions/47984843/jekyll-how-to-not-interpret-jekyll-
 
 # Add a caption under images
 
+https://stackoverflow.com/questions/19331362/using-an-image-caption-in-markdown-jekyll/30366422#30366422
+
 
 # Add support for math formulas
 
@@ -56,3 +58,8 @@ Very easy with Firefox Inspect. Check what properties are used to render a speci
 # Custom code highlighting
 
 I like the GitHub style and I want to reproduce it. Now the page is hosted on GitHub Page, that doesn't mean the GitHub default highlighting is available! We need to recreate the style as well as the copy button. Not a fan of Gists.
+
+# Custom archive page by year
+
+
+# Custom 
