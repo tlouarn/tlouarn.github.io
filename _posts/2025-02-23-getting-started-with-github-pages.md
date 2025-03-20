@@ -1,5 +1,5 @@
 ---
-Title: Getting started with Github pages
+Title: Getting started with Github Pages
 Tags: howto web
 ---
 
