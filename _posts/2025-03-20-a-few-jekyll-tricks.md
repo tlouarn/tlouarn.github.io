@@ -8,13 +8,17 @@ This post is a collection of Jekyll tips and trics
 
 # A basic config file
 
+# First, how to show Jekyll code in a post as text and not have it interpreted
 
+https://stackoverflow.com/questions/47984843/jekyll-how-to-not-interpret-jekyll-ruby-lines-in-a-code-snippet-rouge
 
 
 # Display the tags
 
 ```ruby
-{{ post.tags | sort | join: ", " }}
+{% raw %}
+    {{ post.tags | sort | join: ", " }}
+{% endraw %}
 ```
 
 [Reference](https://www.jflh.ca/2016-01-23-adding-and-displaying-tags-on-jekyll-posts)
