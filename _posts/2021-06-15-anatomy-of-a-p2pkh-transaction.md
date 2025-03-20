@@ -9,9 +9,9 @@ tags: blockchain, bitcoin
 
 When hearing the word **Smart Contract**, one will immediately think of Ethereum. But did you know the Bitcoin blockchain protocol also has some embedded logic in it?
 
-A Bitcoin transaction is a little more complex than a simple "Alice gives X to Bob". Instead, it should be read as "Alice allows Bob to unlock X bitcoins should he need to spend them", and every transaction comes with a little script explaining how can Bob unlock the bitcoins.
+A Bitcoin transaction is a little more complex than a simple "Alice gives X to Bob". Instead, it should read as "Alice allows Bob to unlock X bitcoins should he need to spend them", and every transaction comes with a little script explaining how can Bob unlock the bitcoins.
 
-This script is written in a language `Script` (you can't make that up). Script is a stack-based language of extreme simplicity, which was designed to never fail.
+This script is written in a language named `Script` (you can't make that up). Script is a stack-based language of extreme simplicity which was designed to never fail.
 
 The vast majority of transactions follow the same instruction code saying that if the recipient of the funds can sign his/her own subsequent transactions with a signature matching the HASH, then the transaction is validated. This script is named **P2PKH**, or Pay To PubKey Hash.
 
@@ -25,7 +25,7 @@ OP_EQUALVERIFY
 OP_CHECKSIG
 ```
 
-In plain English, it means: whoever has a public key equal to `1069...` and can digitally sign this message can spend the output.
+In plain English, it means: whoever has a public key hash equal to `1069...` and can digitally sign this message can spend the output.
 
 References:
 * https://www.coursera.org/learn/wharton-cryptocurrency-blockchain-introduction-digital-currency
