@@ -43,3 +43,11 @@ To summarize, a hash function is:
 * avalanche
 * fast
 
+# Usage
+
+Hash functions can be used.
+
+To check the validity of a file with a **checksum**. Acts like the verification digits at the end of a credit card number. If you have a large file to download, how to ensure that all the packets have correctly been received? The server computes a checksum of the file, then sends the file and the checkum. The client receives the file bit by bit (a big file with risk of data loss), then computes the checksum (a 256 bytes piece of data ie low risk of data loss) and ensures both checksums match.
+
+In cryptography, in the context of proof of work.
+
