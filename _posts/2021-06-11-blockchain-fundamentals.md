@@ -3,6 +3,8 @@ title: Blockchain Fundamentals (1)
 tags: bitcoin, blockchain, hash
 ---
 
+![Illustration](/assets/images/tlouarn-blockchain-fundamentals.jpg)
+
 This post is part of a series where I try to explain the basic principles of the blockchain technology in English.
 
 In this first post, I'm introducing two key concepts that will be reused throughout the series.
