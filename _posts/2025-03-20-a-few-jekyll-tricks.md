@@ -63,3 +63,22 @@ I like the GitHub style and I want to reproduce it. Now the page is hosted on Gi
 
 
 # Custom 
+
+# How to add a subtitle
+
+add a "subtitle" property in the front matter and reuse it in the template like so:
+
+```md
+---
+title: Hello World
+subtitle: This is the subtitle
+```
+```
+
+and in `_layouts/post.html':
+
+```html
+{% raw %}
+{%- if page.subtitle -%}<span class="post-subtitle"?>{{ page.subtitle }}</span>{%- endif -%}
+{% endraw %}
+``
