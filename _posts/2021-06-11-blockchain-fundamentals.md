@@ -1,6 +1,6 @@
 ---
 title: Blockchain Fundamentals (1)
-tags: bitcoin, blockchain, hash
+tags: bitcoin blockchain hash
 ---
 
 ![Illustration](/assets/images/tlouarn-blockchain-fundamentals.jpg)
