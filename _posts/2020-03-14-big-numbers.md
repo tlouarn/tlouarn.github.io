@@ -24,4 +24,3 @@ Number of possible Go moves
 
 Googolplex 10 raised to the power of a googol (10^10^100)
 
-TESTTESTTEST
