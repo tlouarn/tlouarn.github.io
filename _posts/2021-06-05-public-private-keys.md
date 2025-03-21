@@ -37,22 +37,22 @@ In other words, although 15 and 3 are not equal in standard arithmetic, they kin
 
 Formally, we write `a` is congruent to `v` mod `p` as follows:
 
-\\[ a \equiv b (mod p) \\]
+\\[ a \equiv b \: (mod \: p) \\]
 
 
 # Fermat's Little Theorem
 
-Fermat's **little theorem** states that if p is a prime number, then for any integer a, the number a ** p - a is a multiple of p. In modular arithmetic this is written as:
+Fermat's **little theorem** states that if $p$ is a prime number, then for any integer $a$, the number $a^p - a$ is a multiple of $p$. In modular arithmetic this is written as:
 
 \\[ a^p \equiv a (mod p) \\]
 
 In the case where a is coprime to p, the statement becomes:
 
-\\[ a^(p-1) \equiv 1 (mod p) \\]
+\\[ a^{p-1} \equiv 1 (mod p) \\]
 
 # Euler's Theorem 
 
-Euler's totient function counts the positive integers up to a given n that are coprime with n. We denote this function as:
+Let's introduce the function $\phi$. Euler's totient function counts the positive integers up to a given n that are coprime with n. We denote this function as:
 
 \\[ \phi(n) \\]
 
@@ -63,7 +63,7 @@ Some examples:
 * phi(7): 7 is prime, therefore phi(7) = 6
 * phi(10): the prime factorization of 10 is 2 * 5, therefore phi(10) = (2 - 1) * (5 - 1) = 4 and the totative numbers are 1, 3, 7, 9
 
-
+Finally, Euler's theoream states that if $a$ and $n$ are coprime then $a ^ (\phi(n))
 
 Euler's Theorem: if a and n are coprime then a ** phi(n) ≡ 1 mod n
 
