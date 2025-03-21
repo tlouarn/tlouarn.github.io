@@ -12,6 +12,9 @@ Alice could place the document in a box, lock it with a padlock, and send it to 
 
 Alice could send the locked box as a first parcel and the key in a separate parcel. The thief would need to intercept both parcels in order to open the box. Although slightly more secure, this approach is not foolproof.
 
+Bob also have a padlock. Bob could send his padlock to Alice, Alice puts the message in the box and locks it with Bob's padlock. Bob receives the box with his padlock on and can unlock it. In this example, Bob's padlock is called **public key** and Bob's key is called **private key**.
+
+[TBC]
 Now let us equip the box with two locks and let us give a distinct padlock to each of Alice and Bob. Alice and Bob each have their own key for their own padlock. The process becomes:
 * Alice places the document in the box, locks it with her padlock and sends to Bob
 * Bob receives the box, places his own padlock next to Alice's and sends back to Alice
