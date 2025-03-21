@@ -59,33 +59,44 @@ This theorem is only guaranteed to work when $$p$$ is a prime number. If $$p$$ i
 Let's try with $$p = 7$$ and $$a = 4$$: 
 
 \\[ a^{p-1} = 4^{7 - 1} = 4^6 = 4096 \\]
-\\[ 4096 mod 7 = 1 (since 4096 = 585 \cdot 7 + 1) \\]
+\\[ 4096 \ mod \ 7 = 1 \\]
 
-Therefore, for every integer $$a < p$$, there is a **modular multiplicative inverse** $$x$$ such that $$a \cdot x \equiv 1 \ (mod \ p)$$.
+Therefore, for every integer $$a < p$$, there is a **modular multiplicative inverse** $$x$$ such that $$a \cdot x \equiv 1 \ (mod \ p)$$. This will be important later on.
 
 # Euler's theorem 
 
-Euler's totient function, named **phi**, counts the positive integers up to a given $$n$$ that are coprime to $$n$$. We denote this function as:
-
-\\[ \phi(n) \\]
+Euler's totient function, named **phi**, counts the positive integers up to a given $$n$$ that are coprime to $$n$$. We denote this function as $$\phi(n)$$.
 
 In particular:
-* if $$n$$ is prime, $$\phi(n) = n - 1$$ (i.e. all numbers up to $$n$$ are coprime to $$n$$ since $$n$$ is prime)
-* if $$n$$ is semiprime and product of primes $$p$$ and $$q$$: $$\phi(n) = (p-1) \times (q-1)$$
+* if $$n$$ is prime then $$\phi(n) = n - 1$$ (i.e. all numbers up to $$n$$ are coprime to $$n$$ since $$n$$ is prime)
+* if $$n$$ is semiprime and the product of prime numbers $$p$$ and $$q$$ then $$\phi(n) = (p-1) \times (q-1)$$
 
 Some examples:
 * since $$7$$ is prime: $$\phi(7) = 7 - 1 = 6$$ (there are 6 numbers smaller than 7 that are coprime to 7 and these are 1, 2, 3, 4, 5, 6)
-* since $$10$$ is semiprime and its prime factorization is $$2 \mult 5$$: $$\phi(10) = (2 - 1) \times (5 - 1) = 4$$, i.e. there are 4 numbers between 1 and 10 that are coprime with 10 and these are 1, 3, 7, 9.
+* since $$10$$ is semiprime and its prime factorization is $$ 2 \mult 5 $$: $$\phi(10) = (2 - 1) \times (5 - 1) = 4$$, i.e. there are 4 numbers between 1 and 10 that are coprime with 10 and these are 1, 3, 7, 9.
 
-Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). It states that if $$a$$ and $$n$$ are coprime then $$a ^ \phi(n)$$ is congruent to 1 modulo $$n$$:
+Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). It states that if $$a$$ and $$n$$ are coprime then $$a ^ {\phi(n)}$$ is congruent to 1 modulo $$n$$:
 
-\\[ a ^ \phi(n) \equiv 1 (mod n) \\]
+\\[ a ^ {\phi(n)} \equiv 1 (mod n) \\]
 
 In the case where $$n$$ is a prime number, we know that $$\phi(n) = n-1$$ and we are back to Fermat's little theorem.
 
 # RSA encryption
 
-The key behind RSA encryption is to make sure messages "wrap around" in a predicatlve
+In plain English, Alice chooses two distinct prime numbers $$p$$ and $$q$$ and computes $$n = p \cdot q$$. $$n$$ is semiprime so $$\phi = (p-1) * (q-1)$$ (i.e. there are $$(p-1) * (q-1)$$ totients $$e$$ that are coprime to $$n$$). Alice randomly chooses one totient $$e$$ and computes its modular multiplicative inverse $$d$$ so that $$e \cdot d \equiv 1 \ (mod \ n)$$.
+
+Alice publishes her public key in the form $$(e, n)$$ and keeps her private key $$(d, n)$$ for herself.
+
+Bob wants to encode the message $$M$$ so that only Alice can decode it.
+
+Bob
+
+Let's assume our message consists of one letter M (in reality its ascii code).
+
+
+ them into $$n$$.
+
+Thanks to the above mathematical background, we are able to encrypt a full message letter by letter. For each letter, we take the ascii number and process it as follows:
 
 
 This idea is used in encryption (like RSA) to make sure messages "wrap around" in a predictable way but are hard to reverse without the key.
@@ -97,16 +108,20 @@ Alice needs to choose two prime numbers in order to generate her public and priv
 The magic of RSA works because ee and dd are chosen so that e⋅d≡1mod  ϕ(n)e⋅d≡1modϕ(n).
 This ensures that raising C to the power d undoes the encryption, bringing back MM.
 
+# A simple example
+
+Let's now look at a very simple example using small prime numbers.
+
 ```python
-# Choose two prime numbers
+# Choose two distinct prime numbers
 p = 13
 q = 19
 
 # Compute n
-n = p * q
+n = p * q  # n = 247
 
 # Compute the Euler totient
-phi = (p-1) * (q-1) = 12 * 18 = 216
+phi = (p-1) * (q-1) = 12 * 18  # phi = 216
 
 # Choose the public exponent
 # e must satisfy 1 < e < phi
@@ -119,7 +134,7 @@ e = 5
 # (d * e) % φ(n) = 1
 # all solutions are in the form (173 + 216k) with k an integer (negative, positive or null)
 d = 173
-# brute_force or 
+# brute_force or euclidean
 
 # Keys
 public_key = (247, 5)
