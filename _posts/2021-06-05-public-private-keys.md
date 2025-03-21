@@ -23,9 +23,9 @@ This way, anyone intercepting the box at any time would be unable to open it.
 # Brush up on prime numbers
 
 Let's make a little detour through the number theory and remind ourselves basic definition around prime numbers.
-* A **prime** number is a natural integer greater than 1 that is not the product of two smaller natural numbers. A prime number can only be divided by itself and 1. A number that is not a prime number is called a **composite** number.
+* A **prime** number is a natural integer greater than 1 that is not the product of two smaller natural numbers. A prime number can only be divided by itself and 1. A number that is not a prime number is called a composite number.
 * A **semiprime** number is the product of exactly two prime numbers. For instance, 15 is a semiprime number since it is the product of 3 and 5. 49 is also a semiprime number (product of 7 and 7). But 8 is not a semiprime number (product of 2 and 4 and 4 is not prime).
-* Two distinct numbers are **coprime** if they have no other common factor than 1. In other words, their **GCD** (Greatest Common Divisor) is 1. A prime number is not coprime to itself. Two distinct prime numbers are always coprime. Two composite numbers can also be coprime: for instance 4 and 9 are both composite numbers but their GCD is 1.
+* Two distinct numbers are **coprime** if they have no other common factor than 1. In other words, their GCD (Greatest Common Divisor) is 1. A prime number is not coprime to itself. Two distinct prime numbers are always coprime. Two composite numbers can also be coprime: for instance 4 and 9 are both composite numbers but their GCD is 1.
 
 # Modulus and congruence
 
@@ -43,7 +43,7 @@ Formally, we write $$a$$ is congruent to $$b$$ mod $$p$$ as follows:
 \\[ a \equiv b \ (mod \ p) \\]
 
 The set of all numbers congruent to $$b \ (mod \ p)$$ can be expressed as:
-\\[\{ a = b + k \cdot p | k \in \Z \}\\]
+\\[ \{ a = b + k \cdot p \ | \ k \in \Z \} \\]
 
 # Fermat's little theorem
 
@@ -56,21 +56,21 @@ This theorem is only guaranteed to work when $$p$$ is a prime number. If $$p$$ i
 Let's try with $$p = 7$$ and $$a = 4$$: 
 
 \\[ a^{p-1} = 4^{7 - 1} = 4^6 = 4096 \\]
-\\[ 4096 mod 7 = 1]
+\\[ 4096 mod 7 = 1 (since 4096 = 585 \cdot 7 + 1) \\]
 
 
 # Euler's theorem 
 
-Euler's totient function, named **phi**, counts the positive integers up to a given $$n$$ that are coprime with $$n$$. We denote this function as:
+Euler's totient function, named **phi**, counts the positive integers up to a given $$n$$ that are coprime to $$n$$. We denote this function as:
 
 \\[ \phi(n) \\]
 
 In particular:
-* if $$n$$ is prime, $$\phi(n) = n - 1$$ (i.e. all numbers up to n are coprime with n since n is prime)
-* if $$n$$ is semiprime and product of primes $$p$$ and $$q$$, $$\phi(n) = (p-1) \times (q-1)$$
+* if $$n$$ is prime, $$\phi(n) = n - 1$$ (i.e. all numbers up to $$n$$ are coprime to $$n$$ since $$n$$ is prime)
+* if $$n$$ is semiprime and product of primes $$p$$ and $$q$$: $$\phi(n) = (p-1) \times (q-1)$$
 
 Some examples:
-* since $$7$$ is prime: $$\phi(7) = 7 - 1 = 6$$
+* since $$7$$ is prime: $$\phi(7) = 7 - 1 = 6$$ (there are 6 numbers smaller than 7 that are coprime to 7 and these are 1, 2, 3, 4, 5, 6)
 * since $$10$$ is semiprime and its prime factorization is $$2 \mult 5$$: $$\phi(10) = (2 - 1) \times (5 - 1) = 4$$, i.e. there are 4 numbers between 1 and 10 that are coprime with 10 and these are 1, 3, 7, 9.
 
 Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). Instead of raising to the power of p, it raises to the power phi(p). if p is prime, then phi(p) = p-1 and we are back to Fermat's little theorem. if p is composite, the theorem holds.
