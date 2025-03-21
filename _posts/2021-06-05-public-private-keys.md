@@ -42,23 +42,18 @@ Formally, we write $a$ is congruent to $b$ mod $p$ as follows:
 
 \\[ a \equiv b \ (mod \ p) \\]
 
-# Fermat's Little Theorem
+# Fermat's little theorem
 
-Fermat's **little theorem** states that if $$p$$ is a prime number, then for any integer $a$, the number $a^p - a$ is a multiple of $p$. In modular arithmetic this is written as:
-
-\\[ a^p \equiv a (mod p) \\]
-
-This theorem is only guaranteed to work when $p$ is a prime number. If $p$ is a composite number, the theorem may still hold but is not guaranteed (cf Carmichael numbers). Euler's theorem is the proper generalization of Fermat's theorem to all p numbers (prime or composite).
-
-In the case where a is coprime to p, the statement becomes:
+Fermat's **little theorem** states that if \\$p\\$ is a prime number and $$a$$ is coprime to $$p$$, then $$a^{p-1}$$ is congruent to $$1$$ modulo $$p$$. In modular arithmetic this is written as:
 
 \\[ a^{p-1} \equiv 1 (mod p) \\]
 
-# Euler's Theorem 
+This theorem is only guaranteed to work when $p$ is a prime number. If $p$ is a composite number, the theorem may still hold but is not guaranteed (cf Carmichael numbers).
 
-Euler's Theorem is a generalization of Fermat's Little Theorem to all numbers p (prime or not). Instead of raising to the power of p, it raises to the power phi(p). if p is prime, then phi(p) = p-1 and we are back to Fermat's little theorem. if p is composite, the theorem holds.
 
-Let's introduce the function $\phi$. Euler's totient function counts the positive integers up to a given n that are coprime with n. We denote this function as:
+# Euler's theorem 
+
+Let's introduce the function $$\phi$$. Euler's totient function counts the positive integers up to a given n that are coprime with n. We denote this function as:
 
 \\[ \phi(n) \\]
 
@@ -68,6 +63,10 @@ Let's introduce the function $\phi$. Euler's totient function counts the positiv
 Some examples:
 * phi(7): 7 is prime, therefore phi(7) = 6
 * phi(10): the prime factorization of 10 is 2 * 5, therefore phi(10) = (2 - 1) * (5 - 1) = 4 and the totative numbers are 1, 3, 7, 9
+
+Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). Instead of raising to the power of p, it raises to the power phi(p). if p is prime, then phi(p) = p-1 and we are back to Fermat's little theorem. if p is composite, the theorem holds.
+
+
 
 Finally, Euler's theoream states that if $a$ and $n$ are coprime then $a ^ (\phi(n))
 
