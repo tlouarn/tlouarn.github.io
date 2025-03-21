@@ -66,29 +66,68 @@ Therefore, for every integer $$a < p$$, there is a **modular multiplicative inve
 
 # Euler's theorem 
 
-Euler's totient function, named **phi**, counts the positive integers up to a given $$n$$ that are coprime to $$n$$. We denote this function as $$\phi(n)$$.
+Euler's totient function, named **phi**, counts the positive integers up to a given integer $$n$$ that are coprime to $$n$$. We denote this function as $$\phi(n)$$.
 
 In particular:
 * if $$n$$ is prime then $$\phi(n) = n - 1$$ (i.e. all numbers up to $$n$$ are coprime to $$n$$ since $$n$$ is prime)
 * if $$n$$ is semiprime and the product of prime numbers $$p$$ and $$q$$ then $$\phi(n) = (p-1) \times (q-1)$$
 
 Some examples:
-* since $$7$$ is prime: $$\phi(7) = 7 - 1 = 6$$ (there are 6 numbers smaller than 7 that are coprime to 7 and these are 1, 2, 3, 4, 5, 6)
-* since $$10$$ is semiprime and its prime factorization is $$2 * 5$$: $$\phi(10) = (2 - 1) \times (5 - 1) = 4$$, i.e. there are 4 numbers between 1 and 10 that are coprime with 10 and these are 1, 3, 7, 9.
+* since $$7$$ is prime: $$\phi(7) = 7 - 1 = 6$$
+* since $$10$$ is semiprime and its prime factorization is $$2 * 5$$: $$\phi(10) = (2 - 1) \times (5 - 1) = 4$$
 
 Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). It states that if $$a$$ and $$n$$ are coprime then $$a ^ {\phi(n)}$$ is congruent to 1 modulo $$n$$:
 
-\\[ a ^ {\phi(n)} \equiv 1 (mod n) \\]
+\\[ a ^ {\phi(n)} \equiv 1 \ (mod \ n) \\]
 
 In the case where $$n$$ is a prime number, we know that $$\phi(n) = n-1$$ and we are back to Fermat's little theorem.
 
 # RSA encryption
 
-In plain English, Alice chooses two distinct prime numbers $$p$$ and $$q$$ and computes $$n = p \cdot q$$. $$n$$ is semiprime so $$\phi = (p-1) * (q-1)$$ (i.e. there are $$(p-1) * (q-1)$$ totients $$e$$ that are coprime to $$n$$). Alice randomly chooses one totient $$e$$ and computes its modular multiplicative inverse $$d$$ so that $$e \cdot d \equiv 1 \ (mod \ n)$$.
+Let's now come back to our encryption problem.
 
-Alice publishes her public key in the form $$(e, n)$$ and keeps her private key $$(d, n)$$ for herself.
+In order to come up with the keys, Bob chooses two distinct prime numbers $$p$$ and $$q$$ and computes $$n = p \cdot q$$. $$n$$ is semiprime so $$\phi = (p-1) * (q-1)$$ (i.e. there are $$(p-1) * (q-1)$$ totients $$e$$ that are coprime to $$n$$). Bob chooses one totient $$e$$ and computes its modular multiplicative inverse $$d$$ so that $$e \cdot d \equiv 1 \ (mod \ n)$$. Bob then broadcasts his public key $$(e, n)$$ and keeps his private key $$(d, n)$$ to himself.
 
-Bob wants to encode the message $$M$$ so that only Alice can decode it.
+Alice wants to encrypt a message $$M$$ made of one letter (actually, a number representing the letter, like its ASCII code).
+
+To do so, Alice computes the encrypted message $$C$$ like so: $$C = M ^ e \ (mod n)$$ and sends it to Bob.
+
+Bob receives $$C$$ and computes $$C ^ d \ (mod \ n)$$ which is equal to $$M$$.
+
+Let's see why that works:
+
+In order to decrypt the message, Bob computes:
+
+\\[ C ^ d \ (mod \ n) \\]
+
+Replacing $$C$$ by $$M ^ e$$ we get:
+
+\\[ M ^ {e \cdot d} \ (mod \ n) \\]
+
+We know that:
+
+\\[e \cdot d \equiv 1 \ (mod \phi(n)) \\]
+
+Which means:
+
+\\[e \cdot d = k \cdot \phi(n) + 1 \\]
+
+We can rewrite:
+
+\\[M ^ {e \cdot d} = M ^ {k \cdot \phi(n) + 1} = M ^ {k \cdot \phi(n)} \cdot M\\]
+
+By Euler's Theorem:
+
+\\[M ^ {k \cdot \phi(n)} \equiv 1 \ (mod \ n)\\]
+
+Therefore:
+
+\\[M ^ {k \cdot \phi(n)} \cdot M \\]
+
+We finally get:
+
+\\[M^\prime = 1 \cdot M \equiv M \ (mod \ n) \\]
+
 
 Bob
 
