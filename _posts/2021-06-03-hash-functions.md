@@ -1,5 +1,6 @@
 ---
 title: Hash Functions
+subtitle: Some definitions and a quick peek at SHA-256
 tags: algorithm
 ---
 
@@ -9,9 +10,9 @@ Inputs can be anything: a single word, the complete works of Victor Hugo or the 
 
 Several hash functions have been designed by cryptographers. A commonly used one is SHA-256 which converts the input into a series of 256 bytes, usually represented as an hexadecimal string (4 bytes per characters gives a 64-long string). How many possible outputs is that? Well, 
 
-\\[ 2^256 ~ 1.158 * 10^77 \\]
+\\[ 2^{256} \approx 1.158 \cdot 10^{77} \\]
 
-With "only" 256 bytes, the output appears deceiptevely small. In reality, 10^77 is an unfathomably high number. For comparison, scientists generally estimate there are around 10^80 atoms in the visible universe. See my other post Big Numbers.
+With "only" 256 bytes, the output appears deceiptevely small. In reality, $$10^{77}$$ is an unfathomably high number. For comparison, scientists generally estimate there are around $$10^{80}$$ atoms in the visible universe.
 
 Let's look at an example using Python and the SHA-256 hashing function:
 

@@ -90,7 +90,7 @@ In order to come up with the keys, Bob chooses two distinct prime numbers $$p$$ 
 
 Alice wants to encrypt a message $$M$$ made of one letter (actually, a number representing the letter, like its ASCII code).
 
-To do so, Alice computes the encrypted message $$C$$ like so: $$C = M ^ e \ (mod n)$$ and sends it to Bob.
+To do so, Alice computes the encrypted message $$C$$ like so: $$C = M ^ e \ (mod \ n)$$ and sends it to Bob.
 
 Bob receives $$C$$ and computes $$C ^ d \ (mod \ n)$$ which is equal to $$M$$.
 
@@ -98,15 +98,15 @@ Let's see why that works:
 
 In order to decrypt the message, Bob computes:
 
-\\[ C ^ d \ (mod \ n) \\]
+\\[ M ^\prime = C ^ d \ (mod \ n) \\]
 
 Replacing $$C$$ by $$M ^ e$$ we get:
 
-\\[ M ^ {e \cdot d} \ (mod \ n) \\]
+\\[ M ^\prime = M ^ {e \cdot d} \ (mod \ n) \\]
 
 We know that:
 
-\\[e \cdot d \equiv 1 \ (mod \phi(n)) \\]
+\\[e \cdot d \equiv 1 \ (mod \ \phi(n)) \\]
 
 Which means:
 
@@ -122,7 +122,7 @@ By Euler's Theorem:
 
 Therefore:
 
-\\[M ^ {k \cdot \phi(n)} \cdot M \\]
+\\[M ^\prime = M ^ {k \cdot \phi(n)} \cdot M \ (mod \ n)\\]
 
 We finally get:
 
