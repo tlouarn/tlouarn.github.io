@@ -82,3 +82,7 @@ and in `_layouts/post.html':
 {%- if page.subtitle -%}<span class="post-subtitle"?>{{ page.subtitle }}</span>{%- endif -%}
 {% endraw %}
 ``
+
+# Making callout boxes
+
+https://github.com/just-the-docs/just-the-docs/issues/171#issuecomment-538794741

@@ -10,9 +10,9 @@ Alice wants to send a confidential document to Bob and wants to make sure that o
 
 Alice could place the document in a box, lock it with a padlock, and send it to Bob. This way, anyone intercepting the box wouldn't be able to open it. But neither would Bob, since he doesn't have the key. So that does not work.
 
-Alice could send the locked box as a first parcel and the key in a separate parcel. The thief would need to intercept both parcels in order to open the box. Although slightly more secure, this approach is not foolproof.
+Alice could send the locked box as a first parcel and the key in a separate parcel. The thief would need to intercept both parcels in order to open the box. Although slightly more secure, this approach is still not good enough.
 
-Bob also have a padlock. Bob could send his padlock to Alice, Alice puts the message in the box and locks it with Bob's padlock. Bob receives the box with his padlock on and can unlock it. In this example, Bob's padlock is called **public key** and Bob's key is called **private key**.
+Bob also has a padlock. Bob could send his padlock to Alice, Alice puts the message in the box and locks it with Bob's padlock. Bob receives the box with his padlock on and can unlock it. In this example, Bob's padlock is called **public key** and Bob's key is called **private key**.
 
 [TBC]
 Now let us equip the box with two locks and let us give a distinct padlock to each of Alice and Bob. Alice and Bob each have their own key for their own padlock. The process becomes:
@@ -32,25 +32,26 @@ Let's make a little detour through the number theory and more particularly prime
 
 # Modulus and congruence
 
-Imagine a clock that shows the hours 1 to 12. If it's 10 o'clock now and you add 5 hours, what time will it be? Well, 10 + 5 = 15 but the clock only goes to 12, after which it wraps around to 3. We say that **3 and 15 are congruent modulo 12**. 
+Imagine a clock that shows the hours 1 to 12. If it's 10 o'clock now and you add 5 hours, what time will it be? Well, 10 + 5 = 15 but the clock only goes to 12, after which it wraps around to 3. We see that 15 and 3 are kind of the same thing but not really. We say that **3 and 15 are congruent modulo 12**. 
 
 It means that:
-* 15 and 3 have the same remainders when divided by 12 (that is 3)
-* in other words, both 15 mod 12 and 3 mod 12 yield the same result (i.e. 3)
+* 15 and 3 have the same remainder when divided by 12, that is 3
 * 12 is a divisor of their difference (15 - 3 = 12, which is a multiple of 12)
 
-In other words, although 15 and 3 are not equal in standard arithmetic, they kind of fall in the same group in **modular arithmetic**: they are "equivalent" within a modular system.
+In other words, although 15 and 3 are not equal in standard arithmetic, they are "equivalent" in **modular arithmetic**.
 
 Formally, we write $$a$$ is congruent to $$b$$ mod $$p$$ as follows:
 
 \\[ a \equiv b \ (mod \ p) \\]
 
+{% comment %} 
 The set of all numbers congruent to $$b \ (mod \ p)$$ can be expressed as:
 \\[ \{ a = b + k \cdot p \ | \ k \in \Z \} \\]
+{% endcomment %} 
 
 # Fermat's little theorem
 
-Fermat's **little theorem** states that if $$p$$ is a prime number and $$a$$ is coprime to $$p$$, then $$a^{p-1}$$ is congruent to $$1$$ modulo $$p$$. In modular arithmetic this is written as:
+Fermat's **little theorem** states that if $$p$$ is a prime number and $$a$$ is an integer coprime to $$p$$, then $$a^{p-1}$$ is congruent to $$1$$ modulo $$p$$. In modular arithmetic this is written as:
 
 \\[ a^{p-1} \equiv 1 \ (mod \ p) \\]
 
@@ -58,10 +59,10 @@ This theorem is only guaranteed to work when $$p$$ is a prime number. If $$p$$ i
 
 Let's try with $$p = 7$$ and $$a = 4$$: 
 
-\\[ a^{p-1} = 4^{7 - 1} = 4^6 = 4096 \\]
+\\[ 4^{7 - 1} = 4096 \\]
 \\[ 4096 \ mod \ 7 = 1 \\]
 
-Therefore, for every integer $$a < p$$, there is a **modular multiplicative inverse** $$x$$ such that $$a \cdot x \equiv 1 \ (mod \ p)$$. In our example above, $$x = 585$$ since $$585 \cdot 7 + 1 = 4096$$. This will be important later on.
+Therefore, for every integer $$a < p$$, there is a **modular multiplicative inverse** $$x$$ such that $$a \cdot x \equiv 1 \ (mod \ p)$$. In our example above, $$x = 2$$ since $$4 \cdot 2 \equiv 1 \ (mod \ 7)$$. This will be important later on.
 
 # Euler's theorem 
 
