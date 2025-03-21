@@ -1,5 +1,5 @@
 ---
-title: Public and Private Keys
+title: Public and private keys
 subtitle: Meet Alice and Bob in their prime.
 tags: algorithm
 ---
@@ -29,7 +29,7 @@ Let's make a little detour by the number theory and remind ourselves basic defin
 
 # Modulus and congruence
 
-Imagine a clock that shows the hours 1 to 12. If it's 10 o'clock now and you add 5 hours, what time will it be? 10 + 5 = 15 but the clock only goes to 12, after which it "wraps around" to 3. We say that **3 and 15 are congruent modulo 12**. It means that:
+Imagine a clock that shows the hours 1 to 12. If it's 10 o'clock now and you add 5 hours, what time will it be? Well, 10 + 5 = 15 but the clock only goes to 12, after which it "wraps around" to 3. We say that **3 and 15 are congruent modulo 12**. It means that:
 * both `15 mod 12` and `3 mod 12` yield the same result (`3`)they have the same remainders when divided by 12
 * 12 is a divisor of their difference (15 - 3 = 12, which is a multiple of 12)
 
