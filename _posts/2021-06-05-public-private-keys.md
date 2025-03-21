@@ -58,6 +58,7 @@ Let's try with $$p = 7$$ and $$a = 4$$:
 \\[ a^{p-1} = 4^{7 - 1} = 4^6 = 4096 \\]
 \\[ 4096 mod 7 = 1 (since 4096 = 585 \cdot 7 + 1) \\]
 
+Therefore, for every integer $$a < p$$, there is a **modular multiplicative inverse** $$x$$ such that $$a \cdot x \equiv 1 \ (mod \ p)$$.
 
 # Euler's theorem 
 
@@ -73,20 +74,16 @@ Some examples:
 * since $$7$$ is prime: $$\phi(7) = 7 - 1 = 6$$ (there are 6 numbers smaller than 7 that are coprime to 7 and these are 1, 2, 3, 4, 5, 6)
 * since $$10$$ is semiprime and its prime factorization is $$2 \mult 5$$: $$\phi(10) = (2 - 1) \times (5 - 1) = 4$$, i.e. there are 4 numbers between 1 and 10 that are coprime with 10 and these are 1, 3, 7, 9.
 
-Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). Instead of raising to the power of p, it raises to the power phi(p). if p is prime, then phi(p) = p-1 and we are back to Fermat's little theorem. if p is composite, the theorem holds.
-
-
-
-Finally, Euler's theoream states that if $a$ and $n$ are coprime then $a ^ (\phi(n))
-
-Euler's Theorem: if a and n are coprime then a ** phi(n) ≡ 1 mod n
+Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). It states that if $$a$$ and $$n$$ are coprime then $$a ^ \phi(n)$$ is congruent to 1 modulo $$n$$:
 
 \\[ a ^ \phi(n) \equiv 1 (mod n) \\]
 
-Indeed, Fermat's Little Theorem is a special case since if n is a prime number then phi(n) = n - 1.
-
+In the case where $$n$$ is a prime number, we know that $$\phi(n) = n-1$$ and we are back to Fermat's little theorem.
 
 # RSA encryption
+
+The key behind RSA encryption is to make sure messages "wrap around" in a predicatlve
+
 
 This idea is used in encryption (like RSA) to make sure messages "wrap around" in a predictable way but are hard to reverse without the key.
 
@@ -154,3 +151,12 @@ RSA is used in secure communications, including HTTPS, digital signatures, and s
 Quantum computing risk?
 
 So, in RSA, the relationship e×d≡1(modϕ(n))e×d≡1(modϕ(n)) ensures that the encryption and decryption processes are inverses of each other, and the exponentiation “loops back” to the original message when we decrypt.
+
+o factor nn, they would need to find pp and qq, and from there compute ϕ(n)ϕ(n), which is computationally infeasible for sufficiently large nn.
+
+Asymmetric encryption (two keys: public and private).
+    Prime numbers and modular arithmetic form the basis of RSA.
+    Public key for encryption and private key for decryption.
+    The security relies on the difficulty of factoring large numbers.
+
+RSA encryption is widely used in securing digital communications, such as in SSL/TLS protocols for web browsing and in digital signatures for authentication.
