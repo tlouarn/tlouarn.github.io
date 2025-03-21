@@ -44,25 +44,26 @@ Formally, we write $a$ is congruent to $b$ mod $p$ as follows:
 
 # Fermat's little theorem
 
-Fermat's **little theorem** states that if \\$p\\$ is a prime number and $$a$$ is coprime to $$p$$, then $$a^{p-1}$$ is congruent to $$1$$ modulo $$p$$. In modular arithmetic this is written as:
+Fermat's **little theorem** states that if $$p$$ is a prime number and $$a$$ is coprime to $$p$$, then $$a^{p-1}$$ is congruent to $$1$$ modulo $$p$$. In modular arithmetic this is written as:
 
-\\[ a^{p-1} \equiv 1 (mod p) \\]
+\\[ a^{p-1} \equiv 1 (mod \ p) \\]
 
-This theorem is only guaranteed to work when $p$ is a prime number. If $p$ is a composite number, the theorem may still hold but is not guaranteed (cf Carmichael numbers).
+This theorem is only guaranteed to work when $$p$$ is a prime number. If #$p$$ is a composite number, the theorem may still hold but is not guaranteed (cf Carmichael numbers).
 
 
 # Euler's theorem 
 
-Let's introduce the function $$\phi$$. Euler's totient function counts the positive integers up to a given n that are coprime with n. We denote this function as:
+Euler's totient function, named **phi**, counts the positive integers up to a given $$n$$ that are coprime with $$n$$. We denote this function as:
 
 \\[ \phi(n) \\]
 
-* if n is prime, phi(n) = n - 1 (i.e. all numbers up to n are coprime with n since n is prime)
-* if n is semiprime and product of primes p and q, phi(n) = (p-1) * (q-1)
+In particular:
+* if $$n$$ is prime, $$\phi(n) = n - 1$$ (i.e. all numbers up to n are coprime with n since n is prime)
+* if $$n$$ is semiprime and product of primes $$p$$ and $$q$$, $$\phi(n) = (p-1) \times (q-1)$$
 
 Some examples:
-* phi(7): 7 is prime, therefore phi(7) = 6
-* phi(10): the prime factorization of 10 is 2 * 5, therefore phi(10) = (2 - 1) * (5 - 1) = 4 and the totative numbers are 1, 3, 7, 9
+* since $$7$$ is prime: $$\phi(7) = 7 - 1 = 6$$
+* since $$10$$ is semiprime and its prime factorization is $$2 \mult 5$$: $$\phi(10) = (2 - 1) \times (5 - 1) = 4$$, i.e. there are 4 numbers between 1 and 10 that are coprime with 10 and these are 1, 3, 7, 9.
 
 Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). Instead of raising to the power of p, it raises to the power phi(p). if p is prime, then phi(p) = p-1 and we are back to Fermat's little theorem. if p is composite, the theorem holds.
 
