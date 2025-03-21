@@ -6,13 +6,13 @@ tags: algorithm
 
 # The problem
 
-Alice wants to send a confidential document to Bob and wants to make sure that only Bob can open it.
+Alice wants to send a confidential document to Bob and wants to make sure that only Bob can open it. Alice does not have access to a private courier and needs to use a public communication channel.
 
-* If Alice sends the document in a box and does not lock it, anyone intercepting the box on the way to Bob would be able to open it and read the document. So obviously that doesn't work.
-* Alice could place the document in a box, lock it with a padlock, and send it to Bob. This way, anyone intercepting the box wouldn't be able to open it. But neither would Bob, since he doesn't have the key. So that does not work.
-* Alice could send the locked box as a first parcel and the key in a separate parcel. The thief would need to intercept both parcels in order to open the box, which is less likely but not foolproof (yes I'm talking to you, corporate workers still sending spreadsheet passwords in a separate email).
+Alice could place the document in a box, lock it with a padlock, and send it to Bob. This way, anyone intercepting the box wouldn't be able to open it. But neither would Bob, since he doesn't have the key. So that does not work.
 
-Now let us equip the box with two locks and let us give a distinct padlock to each of Alice and Bob along with the keys. Each of Alice and Bob has their own key. Now the process becomes:
+Alice could send the locked box as a first parcel and the key in a separate parcel. The thief would need to intercept both parcels in order to open the box. Although slightly more secure, this approach is not foolproof.
+
+Now let us equip the box with two locks and let us give a distinct padlock to each of Alice and Bob. Alice and Bob each have their own key for their own padlock. The process becomes:
 * Alice places the document in the box, locks it with her padlock and sends to Bob
 * Bob receives the box, places his own padlock next to Alice's and sends back to Alice
 * Alice receives the box, removes her padlock, and sends back to Bob
@@ -22,8 +22,8 @@ This way, anyone intercepting the box at any time would be unable to open it.
 
 # Brush up on prime numbers
 
-Let's make a little detour by the number theory and remind ourselves basic definition around prime numbers.
-* A **prime** number is a natural integer greater than 1 that is not the product of two smaller natural numbers. A prime number can only be divided by itself and 1. A number that is not a prime number is called a **composite** number. There are many more composite numbers than prime numbers. The numbers 2, 3, 5, 7 etc. are prime numbers; the numbers 4, 6, 8, 9, 10 etc. are composite numbers.
+Let's make a little detour through the number theory and remind ourselves basic definition around prime numbers.
+* A **prime** number is a natural integer greater than 1 that is not the product of two smaller natural numbers. A prime number can only be divided by itself and 1. A number that is not a prime number is called a **composite** number.
 * A **semiprime** number is the product of exactly two prime numbers. For instance, 15 is a semiprime number since it is the product of 3 and 5. 49 is also a semiprime number (product of 7 and 7). But 8 is not a semiprime number (product of 2 and 4 and 4 is not prime).
 * Two distinct numbers are **coprime** if they have no other common factor than 1. In other words, their **GCD** (Greatest Common Divisor) is 1. A prime number is not coprime to itself. Two distinct prime numbers are always coprime. Two composite numbers can also be coprime: for instance 4 and 9 are both composite numbers but their GCD is 1.
 
@@ -38,17 +38,25 @@ It means that:
 
 In other words, although 15 and 3 are not equal in standard arithmetic, they kind of fall in the same group in **modular arithmetic**: they are "equivalent" within a modular system.
 
-Formally, we write $a$ is congruent to $b$ mod $p$ as follows:
+Formally, we write $$a$$ is congruent to $$b$$ mod $$p$$ as follows:
 
 \\[ a \equiv b \ (mod \ p) \\]
+
+The set of all numbers congruent to $$b \ (mod \ p)$$ can be expressed as:
+\\[\{ a = b + k \cdot p | k \in \Z \}\\]
 
 # Fermat's little theorem
 
 Fermat's **little theorem** states that if $$p$$ is a prime number and $$a$$ is coprime to $$p$$, then $$a^{p-1}$$ is congruent to $$1$$ modulo $$p$$. In modular arithmetic this is written as:
 
-\\[ a^{p-1} \equiv 1 (mod \ p) \\]
+\\[ a^{p-1} \equiv 1 \ (mod \ p) \\]
 
-This theorem is only guaranteed to work when $$p$$ is a prime number. If #$p$$ is a composite number, the theorem may still hold but is not guaranteed (cf Carmichael numbers).
+This theorem is only guaranteed to work when $$p$$ is a prime number. If $$p$$ is a composite number, the theorem may still hold but is not guaranteed (cf Carmichael numbers). 
+
+Let's try with $$p = 7$$ and $$a = 4$$: 
+
+\\[ a^{p-1} = 4^{7 - 1} = 4^6 = 4096 \\]
+\\[ 4096 mod 7 = 1]
 
 
 # Euler's theorem 
