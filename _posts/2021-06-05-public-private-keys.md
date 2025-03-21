@@ -4,7 +4,9 @@ subtitle: Meet Alice and Bob in their prime.
 tags: algorithm
 ---
 
-Let's now look at a classic problem in computer science: Alice wants to send a confidential document to Bob and wants to make sure that only Bob can open it.
+# The problem
+
+Alice wants to send a confidential document to Bob and wants to make sure that only Bob can open it.
 
 * If Alice sends the document in a box and does not lock it, anyone intercepting the box on the way to Bob would be able to open it and read the document. So obviously that doesn't work.
 * Alice could place the document in a box, lock it with a padlock, and send it to Bob. This way, anyone intercepting the box wouldn't be able to open it. But neither would Bob, since he doesn't have the key. So that does not work.
@@ -18,24 +20,27 @@ Now let's equip the box with two padlocks and let's give a padlock to each of Al
 
 This way, anyone intercepting the box at any time would be unable to open it.
 
-# Euler's Totient Function
+# Brush up on prime numbers
 
-Let's make a little detour by the number theory.
+Let's make a little detour by the number theory and remind ourselves basic definition around prime numbers.
+* A **prime** number is a natural integer greater than 1 that is not the product of two smaller natural numbers. A prime number can only be divided by itself and 1. A number that is not a prime number is called a **composite** number. There are many more composite numbers than prime numbers. The numbers 2, 3, 5, 7 etc. are prime numbers; the numbers 4, 6, 8, 9, 10 etc. are composite numbers.
+* A **semiprime** number is the product of exactly two prime numbers. For instance, 15 is a semiprime number since it is the product of 3 and 5. 49 is also a semiprime number (product of 7 and 7). But 8 is not a semiprime number (product of 2 and 4 and 4 is not prime).
+* Two numbers are **coprime** if they have no other common factor than 1. In other words, their **GCD** (Greatest Common Divisor) is 1. These two numbers do **not** need to be prime numbers themselves. For instance: 3 and 10 are coprime (3 is prime and there is no integer i such that 3 * i = 10). But 5 and 20 are not coprime since 5 * 4 = 20.
 
-A **prime** number is an integer greater than 1 that cannot be exactly divided by any whole number other than itself and 1. The first prime numbers are 2, 3, 5, 7, 11 etc.
+# Modulus and congruence
 
-A **semiprime** number is the product of exactly two prime numbers, which may or may not be the same.
-* 15 is a semiprime (product of 3 * 5)
-* 49 is a semiprime number (product of 7 x 7)
-* 8 is not a semiprime number (product of 4 x 2 and 4 is not prime)
-
-Two numbers are **coprime** if they have no other common factor than 1. They don't need to be prime numbers themselves. For instance: 3 and 10 are coprime (3 is prime and there is no integer i such that 3 * i = 10). But 5 and 20 are not coprime since 5 * 4 = 20.
-
-Consider a 12-hour clock. Both 3AM and 3PM have the same position. We say that 15 is congruent to 3 modulo 12, meaning that:
-* both 15 mod 12 and 3 mod 12 yield the same result (3) -> they have the same remainders when divided by 12
+Imagine a clock that shows the hours 1 to 12. If it's 10 o'clock now and you add 5 hours, what time will it be? 10 + 5 = 15 but the clock only goes to 12, after which it "wraps around" to 3. We say that **3 and 15 are congruent modulo 12**. It means that:
+* both `15 mod 12` and `3 mod 12` yield the same result (`3`)they have the same remainders when divided by 12
 * 12 is a divisor of their difference (15 - 3 = 12, which is a multiple of 12)
 
-15 and 3 are not equal in standard arithmetic but fall in the same group in modular arithmetic -> they are equivalent within a modular system. 
+In other words, although 15 and 3 are not equal in standard arithmetic, they kind of fall in the same group in **modular arithmetic**: they are equivalent within a modular system.
+
+Formally, we write `a` is congruent to `v` mod `p` as follows:
+
+\\[ a \equiv b (mod p) \\]
+
+
+# Fermat's Little Theorem
 
 Fermat's **little theorem** states that if p is a prime number, then for any integer a, the number a ** p - a is a multiple of p. In modular arithmetic this is written as:
 
@@ -44,6 +49,8 @@ Fermat's **little theorem** states that if p is a prime number, then for any int
 In the case where a is coprime to p, the statement becomes:
 
 \\[ a^(p-1) \equiv 1 (mod p) \\]
+
+# Euler's Theorem 
 
 Euler's totient function counts the positive integers up to a given n that are coprime with n. We denote this function as:
 
@@ -56,7 +63,7 @@ Some examples:
 * phi(7): 7 is prime, therefore phi(7) = 6
 * phi(10): the prime factorization of 10 is 2 * 5, therefore phi(10) = (2 - 1) * (5 - 1) = 4 and the totative numbers are 1, 3, 7, 9
 
-**Congruence** is defined as: a≡b(modn)a≡b(modn) means that a and b have the same remainder when divided by nn. In other words, a and b are congruent modulo n. The two numbers are "equivalent" in some modular system.
+
 
 Euler's Theorem: if a and n are coprime then a ** phi(n) ≡ 1 mod n
 
@@ -66,6 +73,9 @@ Indeed, Fermat's Little Theorem is a special case since if n is a prime number t
 
 
 # RSA encryption
+
+This idea is used in encryption (like RSA) to make sure messages "wrap around" in a predictable way but are hard to reverse without the key.
+
 
 Alice needs to choose two prime numbers in order to generate her public and private keys.
 
