@@ -1,7 +1,7 @@
 ---
 title: Public and private keys
 subtitle: Meet Alice and Bob in their prime.
-tags: algorithm, prime, rsa
+tags: algorithm
 ---
 
 # The problem
@@ -25,7 +25,7 @@ This way, anyone intercepting the box at any time would be unable to open it.
 Let's make a little detour by the number theory and remind ourselves basic definition around prime numbers.
 * A **prime** number is a natural integer greater than 1 that is not the product of two smaller natural numbers. A prime number can only be divided by itself and 1. A number that is not a prime number is called a **composite** number. There are many more composite numbers than prime numbers. The numbers 2, 3, 5, 7 etc. are prime numbers; the numbers 4, 6, 8, 9, 10 etc. are composite numbers.
 * A **semiprime** number is the product of exactly two prime numbers. For instance, 15 is a semiprime number since it is the product of 3 and 5. 49 is also a semiprime number (product of 7 and 7). But 8 is not a semiprime number (product of 2 and 4 and 4 is not prime).
-* Two distinct numbers are **coprime** if they have no other common factor than 1. In other words, their **GCD** (Greatest Common Divisor) is 1. These two numbers do **not** need to be prime numbers themselves. For instance: 10 is not prime but 3 and 10 are coprime (3 is prime and there is no integer i such that 3 * i = 10). But 5 and 20 are not coprime since 5 * 4 = 20. Of course, two distinct prime numbers are also coprime (but a prime number is not coprime to itself).
+* Two distinct numbers are **coprime** if they have no other common factor than 1. In other words, their **GCD** (Greatest Common Divisor) is 1. A prime number is not coprime to itself. Two distinct prime numbers are always coprime. Two composite numbers can also be coprime: for instance 4 and 9 are both composite numbers but their GCD is 1.
 
 # Modulus and congruence
 
@@ -44,7 +44,7 @@ Formally, we write $a$ is congruent to $b$ mod $p$ as follows:
 
 # Fermat's Little Theorem
 
-Fermat's **little theorem** states that if $p$ is a prime number, then for any integer $a$, the number $a^p - a$ is a multiple of $p$. In modular arithmetic this is written as:
+Fermat's **little theorem** states that if $$p$$ is a prime number, then for any integer $a$, the number $a^p - a$ is a multiple of $p$. In modular arithmetic this is written as:
 
 \\[ a^p \equiv a (mod p) \\]
 
