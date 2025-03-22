@@ -32,7 +32,7 @@ minima:
     - bookmarks.md
     - piano.md
     - tags.md
-    - archive.md
+    - archive.html
 
   # Set to `true` to show excerpts on the homepage.
   #show_excerpts: false
