@@ -21,13 +21,11 @@ Let us imagine a clock that shows the hours 1 to 12. If it is 10 o'clock now and
 
 It means that  15 and 3 have the same remainder when divided by 12 - which is 3 -. It also means that 12 is a divisor of their difference (15 - 3 = 12, which is a multiple of 12)
 
-In other words, although 15 and 3 are not equal in standard arithmetic, they are "equivalent" in **modular arithmetic**. Formally, we write $$a$$ is congruent to $$b$$ mod $$p$$ as follows:
+In other words, although 15 and 3 are not equal in standard arithmetic, they are "equivalent" in **modular arithmetic**. Formally, we write $$a$$ is congruent to $$b$$ modulo $$p$$ as follows:
 
 \\[ a \equiv b \ (mod \ p) \\]
 
-And we can express the set of all numbers congruent to $$b \ (mod \ p)$$ as follows:
-
-\\[ a = b + k \cdot p \ | \ k \in \Z \\]
+The set of all numbers congruent to $$b \ (mod \ p)$$ is $$b + k \cdot p \ | \ k in \Z $$
 
 # Fermat's little theorem
 
