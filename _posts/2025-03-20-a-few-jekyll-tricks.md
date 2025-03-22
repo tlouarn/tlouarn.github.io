@@ -61,6 +61,9 @@ I like the GitHub style and I want to reproduce it. Now the page is hosted on Gi
 
 # Custom archive page by year
 
+https://stuntbox.com/blog/jekyll-archives-group-posts-by-year/#solution
+
+Make sure to rename the page "archive.html" to avoid it being processed by the markdown parser.
 
 # Custom 
 
