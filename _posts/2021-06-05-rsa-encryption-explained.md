@@ -19,9 +19,7 @@ Two distinct numbers are **coprime** if they have no other common factor than 1.
 
 Let us imagine a clock that shows the hours 1 to 12. If it is 10 o'clock now and one adds 5 hours, what time will it be? Well, 10 + 5 = 15 but the clock only goes to 12, after which it wraps around to 3. We see that 15 and 3 are kind of the same thing but not really. We say that **3 and 15 are congruent modulo 12**. 
 
-It means that:
-* 15 and 3 have the same remainder when divided by 12 (3)
-* 12 is a divisor of their difference (15 - 3 = 12, which is a multiple of 12)
+It means that  15 and 3 have the same remainder when divided by 12 - which is 3 -. It also means that 12 is a divisor of their difference (15 - 3 = 12, which is a multiple of 12)
 
 In other words, although 15 and 3 are not equal in standard arithmetic, they are "equivalent" in **modular arithmetic**. Formally, we write $$a$$ is congruent to $$b$$ mod $$p$$ as follows:
 
