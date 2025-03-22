@@ -4,7 +4,8 @@ subtitle: The mathematics behind the classic public-key encryption algorithm.
 tags: algorithm
 ---
 
-* {:toc}
+* 
+{:toc}
 
 # Prime numbers
 
