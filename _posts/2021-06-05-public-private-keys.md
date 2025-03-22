@@ -6,11 +6,11 @@ tags: algorithm
 
 # The problem
 
-Alice wants to send a confidential document to Bob and wants to make sure that only Bob can open it. Alice does not have access to a private courier and needs to use a public communication channel.
+Alice wants to send a confidential document to Bob. Alice does not have access to a private courier and needs to use a public communication channel.
 
 Alice could place the document in a box, lock it with a padlock, and send it to Bob. This way, anyone intercepting the box wouldn't be able to open it. But neither would Bob, since he doesn't have the key. So that does not work.
 
-Alice could send the locked box as a first parcel and the key in a separate parcel. The thief would need to intercept both parcels in order to open the box. Although slightly more secure, this approach is still not good enough.
+Alice could send the locked box in a parcel and the key in another. The thief would need to intercept both parcels in order to open the box. Although slightly more secure, this approach is still not good enough.
 
 Now let us assume Bob also has a padlock. The solution becomes:
 * Bob sends his padlock to Alice (but keeps the key)
@@ -19,7 +19,7 @@ Now let us assume Bob also has a padlock. The solution becomes:
 
 In this example, Bob's padlock is called a **public key** and Bob's key is called a **private key**.
 
-{% comment }
+{% comment %}
 [TBC]
 Now let us equip the box with two locks and let us give a distinct padlock to each of Alice and Bob. Alice and Bob each have their own key for their own padlock. The process becomes:
 * Alice places the document in the box, locks it with her padlock and sends to Bob
@@ -28,7 +28,7 @@ Now let us equip the box with two locks and let us give a distinct padlock to ea
 * Bob receives the box again, this time with only his padlock, and can open it
 
 This way, anyone intercepting the box at any time would be unable to open it.
-{% endcomment }
+{% endcomment %}
 
 # Brush up on prime numbers
 
