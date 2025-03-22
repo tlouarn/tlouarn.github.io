@@ -4,6 +4,8 @@ layout: page
 tags: [test, test2]
 ---
 
-{%- for tag in page.tags -%}
+{%- for tag in site.tags -%}
     <a href="/tags#{{ tag }}" class="tag">{{ tag }}</a> |
 {%- endfor -%}
+
+
