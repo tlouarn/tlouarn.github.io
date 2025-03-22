@@ -31,7 +31,7 @@ minima:
   nav_pages:
     - bookmarks.md
     - piano.md
-    - tags.md
+    - tags.html
     - archive.html
 
   # Set to `true` to show excerpts on the homepage.
