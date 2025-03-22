@@ -86,3 +86,5 @@ and in `_layouts/post.html':
 # Making callout boxes
 
 https://github.com/just-the-docs/just-the-docs/issues/171#issuecomment-538794741
+
+# Auto hyphens
