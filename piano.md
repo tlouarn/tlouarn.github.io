@@ -1,7 +1,9 @@
 ---
 title: Piano
+subtitle: Chi va piano va sano
 layout: page
 ---
+
 
 Knowing which piano pieces you love is one thing, but finding the right performer to bring them to life is another. This page lists my favorite piano pieces as well as the interpretation which I think is best. It is extremely subjective.
 
