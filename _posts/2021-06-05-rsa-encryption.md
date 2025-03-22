@@ -1,36 +1,11 @@
 ---
-title: Public and private keys
-subtitle: Meet Alice and Bob in their prime.
+title: RSA encryption
+subtitle: The mathematics behind the pioneer of public-key encryption.
 tags: algorithm
 ---
 
-# The problem
 
-Alice wants to send a confidential document to Bob. Alice does not have access to a private courier and needs to use a public communication channel.
-
-Alice could place the document in a box, lock it with a padlock, and send it to Bob. This way, anyone intercepting the box wouldn't be able to open it. But neither would Bob, since he doesn't have the key. So that does not work.
-
-Alice could send the locked box in a parcel and the key in another. The thief would need to intercept both parcels in order to open the box. Although slightly more secure, this approach is still not good enough.
-
-Now let us assume Bob also has a padlock. The solution becomes:
-* Bob sends his padlock to Alice (but keeps the key)
-* Alice places the document in the box and locks it with Bob's padlock
-* Bob receives the box and can unlock it.
-
-In this example, Bob's padlock is called a **public key** and Bob's key is called a **private key**. And we are able to replicate the same mechanism using properties of prime numbers.
-
-# The clock
-
-{% comment %}
-[TBC]
-Now let us equip the box with two locks and let us give a distinct padlock to each of Alice and Bob. Alice and Bob each have their own key for their own padlock. The process becomes:
-* Alice places the document in the box, locks it with her padlock and sends to Bob
-* Bob receives the box, places his own padlock next to Alice's and sends back to Alice
-* Alice receives the box, removes her padlock, and sends back to Bob
-* Bob receives the box again, this time with only his padlock, and can open it
-
-This way, anyone intercepting the box at any time would be unable to open it.
-{% endcomment %}
+* {:toc}
 
 # Prime numbers
 
@@ -42,7 +17,7 @@ Two distinct numbers are **coprime** if they have no other common factor than 1.
 
 # Modulus and congruence
 
-Imagine a clock that shows the hours 1 to 12. If it's 10 o'clock now and you add 5 hours, what time will it be? Well, 10 + 5 = 15 but the clock only goes to 12, after which it wraps around to 3. We see that 15 and 3 are kind of the same thing but not really. We say that **3 and 15 are congruent modulo 12**. 
+Let us imagine a clock that shows the hours 1 to 12. If it is 10 o'clock now and one adds 5 hours, what time will it be? Well, 10 + 5 = 15 but the clock only goes to 12, after which it wraps around to 3. We see that 15 and 3 are kind of the same thing but not really. We say that **3 and 15 are congruent modulo 12**. 
 
 It means that:
 * 15 and 3 have the same remainder when divided by 12 (3)
