@@ -4,7 +4,6 @@ subtitle: The mathematics behind the classic public-key encryption algorithm.
 tags: algorithm
 ---
 
-
 * {:toc}
 
 # Prime numbers
@@ -66,6 +65,8 @@ In the case where $$n$$ is a prime number, we know that $$\phi(n) = n-1$$ and we
 Let's now come back to our encryption problem.
 
 In order to come up with the keys, Bob chooses two distinct prime numbers $$p$$ and $$q$$ and computes $$n = p \cdot q$$. $$n$$ is semiprime so $$\phi = (p-1) * (q-1)$$ (i.e. there are $$(p-1) * (q-1)$$ totients $$e$$ that are coprime to $$n$$). Bob chooses one totient $$e$$ and computes its modular multiplicative inverse $$d$$ so that $$e \cdot d \equiv 1 \ (mod \ n)$$. Bob then broadcasts his public key $$(e, n)$$ and keeps his private key $$(d, n)$$ to himself.
+
+The totient $$e$$ has to be coprime to $$n$$ so that there is a modular multiplicative inverse. Finding the modular multiplicative inverse 
 
 Alice wants to encrypt a message $$M$$ made of one letter (actually, a number representing the letter, like its ASCII code).
 
