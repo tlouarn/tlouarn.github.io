@@ -3,8 +3,32 @@ title: Archive
 layout: page
 ---
 
-<ul>
-  {% for post in site.posts %}
-    <li>{{ post.date | date: "%B %Y" }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+
+    {% capture year_of_current_post %}
+    {{ post.date | date: "%Y" }}
+    {% endcapture %}
+
+    {% capture year_of_previous_post %}
+    {{ post.previous.date | date: "%Y" }}
+    {% endcapture %}
+
+    {% if forloop.first %}
+    <h2>{{ year_of_current_post }}</h2>
+    <ul>
+    {% endif %}
+
+            <li><a href="{{ post.url }}">{{ post.title }}</a> · {{ post.date | date: "%B %Y" }}</a></li>
+
+    {% if forloop.last %}
+    </ul>
+    {% else %}
+    {% if year_of_current_post != year_of_previous_post %}
+    </ul>
+
+    <h2>{{ year_of_previous_post }}</h2>
+    <ul>
+    {% endif %}
+    {% endif %}
+
+{% endfor %}
