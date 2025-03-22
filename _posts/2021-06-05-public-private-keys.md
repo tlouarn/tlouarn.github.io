@@ -17,7 +17,7 @@ Now let us assume Bob also has a padlock. The solution becomes:
 * Alice places the document in the box and locks it with Bob's padlock
 * Bob receives the box and can unlock it.
 
-In this example, Bob's padlock is called a **public key** and Bob's key is called a **private key**.
+In this example, Bob's padlock is called a **public key** and Bob's key is called a **private key**. And we are able to replicate the same mechanism using properties of prime numbers.
 
 {% comment %}
 [TBC]
@@ -30,19 +30,20 @@ Now let us equip the box with two locks and let us give a distinct padlock to ea
 This way, anyone intercepting the box at any time would be unable to open it.
 {% endcomment %}
 
-# Brush up on prime numbers
+# Prime numbers
 
-Let's make a little detour through the number theory and more particularly prime numbers.
-* A **prime** number is a natural integer greater than 1 that is not the product of two smaller natural numbers. A prime number can only be divided by itself and 1. A number that is not a prime number is called a composite number.
-* A **semiprime** number is the product of exactly two prime numbers. For instance, 15 is a semiprime number since it is the product of 3 and 5. 49 is also a semiprime number (product of 7 and 7). But 8 is not a semiprime number (product of 2 and 4 and 4 is not prime).
-* Two distinct numbers are **coprime** if they have no other common factor than 1. In other words, their GCD (Greatest Common Divisor) is 1. A prime number is not coprime to itself. Two distinct prime numbers are always coprime. Two composite numbers can also be coprime: for instance 4 and 9 are both composite numbers but their GCD is 1.
+A **prime** number is a natural integer greater than 1 that is not the product of two smaller natural numbers. A prime number can only be divided by itself and 1. A number that is not a prime number is called a composite number.
+
+A **semiprime** number is the product of exactly two prime numbers. For instance, 15 is a semiprime number since it is the product of 3 and 5. 49 is also a semiprime number (product of 7 and 7). But 8 is not a semiprime number (product of 2 and 4 and 4 is not prime).
+
+Two distinct numbers are **coprime** if they have no other common factor than 1. In other words, their GCD (Greatest Common Divisor) is 1. Two distinct prime numbers are always coprime. Two composite numbers can also be coprime (for instance 4 and 9 are both composite numbers but their GCD is 1). By definition, a prime number cannot be coprime to itself.
 
 # Modulus and congruence
 
 Imagine a clock that shows the hours 1 to 12. If it's 10 o'clock now and you add 5 hours, what time will it be? Well, 10 + 5 = 15 but the clock only goes to 12, after which it wraps around to 3. We see that 15 and 3 are kind of the same thing but not really. We say that **3 and 15 are congruent modulo 12**. 
 
 It means that:
-* 15 and 3 have the same remainder when divided by 12, that is 3
+* 15 and 3 have the same remainder when divided by 12 (3)
 * 12 is a divisor of their difference (15 - 3 = 12, which is a multiple of 12)
 
 In other words, although 15 and 3 are not equal in standard arithmetic, they are "equivalent" in **modular arithmetic**.
@@ -51,10 +52,10 @@ Formally, we write $$a$$ is congruent to $$b$$ mod $$p$$ as follows:
 
 \\[ a \equiv b \ (mod \ p) \\]
 
-{% comment %} 
 The set of all numbers congruent to $$b \ (mod \ p)$$ can be expressed as:
+
 \\[ \{ a = b + k \cdot p \ | \ k \in \Z \} \\]
-{% endcomment %} 
+
 
 # Fermat's little theorem
 
