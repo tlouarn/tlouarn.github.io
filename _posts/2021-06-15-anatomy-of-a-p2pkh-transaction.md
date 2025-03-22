@@ -1,6 +1,6 @@
 ---
 title: Anatomy of a P2PKH transaction
-tags: blockchain, bitcoin
+tags: blockchain bitcoin
 ---
 
 > We define an electronic coin as a chain of digital signatures. Each owner transfers the coin to the next by digitally signing a hash of the previous transaction and the public key of the next owner and adding these to the end of the coin. A payee can verify the signatures to verify the chain of ownership.

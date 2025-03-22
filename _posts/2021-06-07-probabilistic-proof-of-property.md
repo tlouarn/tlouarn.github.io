@@ -1,6 +1,6 @@
 ---
 title: Probabilistic proof of property
-tag: blockchain
+tags: blockchain
 ---
 
 In a traditional setup, dubbed TradFi, the proof of property is **centralized** and **deterministic**. 

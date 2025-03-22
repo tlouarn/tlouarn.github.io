@@ -1,6 +1,6 @@
 ---
 title: The blockchain is anonymous but not private
-tag: blockchain
+tags: blockchain
 toc: true
 ---
 

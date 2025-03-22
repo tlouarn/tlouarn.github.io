@@ -1,6 +1,6 @@
 ---
 title: Implementing Domain-Driven Design
-tag: ddd python books
+tags: ddd python books
 toc: true
 ---
 
