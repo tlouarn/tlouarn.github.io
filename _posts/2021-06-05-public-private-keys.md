@@ -52,7 +52,7 @@ In other words, although 15 and 3 are not equal in standard arithmetic, they are
 
 And we can express the set of all numbers congruent to $$b \ (mod \ p)$$ as:
 
-\\[ \{ a = b + k \cdot p \ | \ k \in \Z \} \\]
+\\[\{a = b + k \cdot p \ | \ k \in \Z \}\\]
 
 
 # Fermat's little theorem
