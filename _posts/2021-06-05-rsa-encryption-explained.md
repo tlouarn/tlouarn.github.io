@@ -25,7 +25,7 @@ In other words, although 15 and 3 are not equal in standard arithmetic, they are
 
 \\[ a \equiv b \ (mod \ p) \\]
 
-The set of all numbers congruent to $$b \ (mod \ p)$$ is $$b + k \cdot p \ | \ k in \Z $$
+The set of all numbers congruent to $$b \ (mod \ p)$$ is $$b + k \cdot p \ \vert \ k in \Z $$
 
 # Fermat's little theorem
 
@@ -73,13 +73,13 @@ Bob receives $$C$$ and computes $$C ^ d \ (mod \ n)$$ which is equal to $$M$$.
 
 Let's see why that works:
 
-In order to decrypt the message, Bob computes:
+In order to decrypt the message, Bob computes the decrypted message $$M^\prime$$ as follows:
 
-\\[ M ^\prime = C ^ d \ (mod \ n) \\]
+\\[ M^\prime = C ^ d \ (mod \ n) \\]
 
 Replacing $$C$$ by $$M ^ e$$ we get:
 
-\\[ M ^\prime = M ^ {e \cdot d} \ (mod \ n) \\]
+\\[ M^\prime = M ^ {e \cdot d} \ (mod \ n) \\]
 
 We know that:
 
@@ -89,9 +89,13 @@ Which means:
 
 \\[e \cdot d = k \cdot \phi(n) + 1 \\]
 
-We can rewrite:
+So we can rewrite:
 
 \\[M ^ {e \cdot d} = M ^ {k \cdot \phi(n) + 1} = M ^ {k \cdot \phi(n)} \cdot M\\]
+
+And therefore:
+
+\\[ M^\prime = M ^ {k \cdot \phi(n)} \cdot M \ (mod \ n) \\]
 
 By Euler's Theorem:
 
@@ -105,29 +109,9 @@ We finally get:
 
 \\[M^\prime = 1 \cdot M \equiv M \ (mod \ n) \\]
 
-
-Bob
-
-Let's assume our message consists of one letter M (in reality its ascii code).
-
-
- them into $$n$$.
-
-Thanks to the above mathematical background, we are able to encrypt a full message letter by letter. For each letter, we take the ascii number and process it as follows:
-
-
-This idea is used in encryption (like RSA) to make sure messages "wrap around" in a predictable way but are hard to reverse without the key.
-
-it is based on phi(n), which is trivial to find when you know p and q, but practically impossible to find for large values of n when you don't know p and q. it also relies on the notion of modular
-
-Alice needs to choose two prime numbers in order to generate her public and private keys.
-
-The magic of RSA works because ee and dd are chosen so that e⋅d≡1mod  ϕ(n)e⋅d≡1modϕ(n).
-This ensures that raising C to the power d undoes the encryption, bringing back MM.
-
 # A simple example
 
-Let's now look at a very simple example using small prime numbers.
+Let us now look at a basic example using small prime numbers.
 
 ```python
 # Choose two distinct prime numbers
@@ -168,14 +152,17 @@ encrypted_msg = [i ** e % n for i in ascii_msg]
 decrypted_msg = [i ** d % n for i in encrypted_msg]
 decrypted_msg = ''.join(chr(i) for i in decrypted_msg)
 assert msg == decrypted_msg
-
 ```
+
+
+
+
+
+
 
 The key idea is that e×d≡1(modϕ(n))e×d≡1(modϕ(n)) ensures that encryption and decryption are inverse operations. This is why raising the ciphertext CC to the power of dd (using the private key) recovers the original plaintext message MM. This key property is the foundation for RSA to work. It ensures that encryption and decryption can undo each other.
 
-security is that even if someone knows n, it can't easily find p and q
 
-what is hard is to compute phi(n). It is trivial if we know p and q, but not trivial if we don't know them.
 
 How many prime numbers do we know
 Prime estimate
