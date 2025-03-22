@@ -34,9 +34,9 @@ This way, anyone intercepting the box at any time would be unable to open it.
 
 A **prime** number is a natural integer greater than 1 that is not the product of two smaller natural numbers. A prime number can only be divided by itself and 1. A number that is not a prime number is called a composite number.
 
-A **semiprime** number is the product of exactly two prime numbers. For instance, 15 is a semiprime number since it is the product of 3 and 5. 49 is also a semiprime number (product of 7 and 7). But 8 is not a semiprime number (product of 2 and 4 and 4 is not prime).
+A **semiprime** number is the product of exactly two prime numbers. For instance, 15 is a semiprime number since it is the product of 3 and 5. 49 is also a semiprime number since it is the product of 7 and 7. But 8 is not a semiprime number since 8 is the product of 2 and 4.
 
-Two distinct numbers are **coprime** if they have no other common factor than 1. In other words, their GCD (Greatest Common Divisor) is 1. Two distinct prime numbers are always coprime. Two composite numbers can also be coprime (for instance 4 and 9 are both composite numbers but their GCD is 1). By definition, a prime number cannot be coprime to itself.
+Two distinct numbers are **coprime** if they have no other common factor than 1. In other words, their GCD (Greatest Common Divisor) is 1. Two distinct prime numbers are always coprime. Two composite numbers can also be coprime (for instance 4 and 9 are both composite numbers but their GCD is 1). But a prime number cannot be coprime to itself.
 
 # Modulus and congruence
 
@@ -50,10 +50,9 @@ In other words, although 15 and 3 are not equal in standard arithmetic, they are
 
 \\[ a \equiv b \ (mod \ p) \\]
 
-And we can express the set of all numbers congruent to $$b \ (mod \ p)$$ as:
+And we can express the set of all numbers congruent to $$b \ (mod \ p)$$ as follows:
 
-\\[\{a = b + k \cdot p \ | \ k \in \Z \}\\]
-
+\\[ a = b + k \cdot p \ | \ k \in \Z \\]
 
 # Fermat's little theorem
 
@@ -63,10 +62,7 @@ Fermat's **little theorem** states that if $$p$$ is a prime number and $$a$$ is 
 
 This theorem is only guaranteed to work when $$p$$ is a prime number. If $$p$$ is a composite number, the theorem may still hold but is not guaranteed (cf Carmichael numbers). 
 
-Let us try with $$p = 7$$ and $$a = 4$$: 
-
-\\[ 4^{7 - 1} = 4096 \\]
-\\[ 4096 \ mod \ 7 = 1 \\]
+Let us try with $$p = 7$$ and $$a = 4$$: $$ 4^{7 - 1} = 4096$$ and $$4096 \ mod \ 7 = 1$$.
 
 Therefore, for every integer $$a < p$$, there is a **modular multiplicative inverse** $$x$$ such that $$a \cdot x \equiv 1 \ (mod \ p)$$. In our example above, $$x = 2$$ since $$4 \cdot 2 \equiv 1 \ (mod \ 7)$$. This will be important later on.
 
@@ -82,9 +78,7 @@ Let us look at some examples:
 * since $$7$$ is prime: $$\phi(7) = 7 - 1 = 6$$
 * since $$10$$ is semiprime and its prime factorization is $$2 \cdot 5$$: $$\phi(10) = (2 - 1) \times (5 - 1) = 4$$
 
-Now that we understood the $$\phi(n)$$ function, let us introduce Euler's theorem. Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). 
-
-It states that if $$a$$ and $$n$$ are coprime then $$a ^ {\phi(n)}$$ is congruent to 1 modulo $$n$$:
+Now that we understood the $$\phi(n)$$ function, let us introduce Euler's theorem. Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). It states that if $$a$$ and $$n$$ are coprime then $$a ^ {\phi(n)}$$ is congruent to 1 modulo $$n$$:
 
 \\[ a ^ {\phi(n)} \equiv 1 \ (mod \ n) \\]
 
