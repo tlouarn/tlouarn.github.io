@@ -12,8 +12,14 @@ Alice could place the document in a box, lock it with a padlock, and send it to 
 
 Alice could send the locked box as a first parcel and the key in a separate parcel. The thief would need to intercept both parcels in order to open the box. Although slightly more secure, this approach is still not good enough.
 
-Bob also has a padlock. Bob could send his padlock to Alice, Alice puts the message in the box and locks it with Bob's padlock. Bob receives the box with his padlock on and can unlock it. In this example, Bob's padlock is called **public key** and Bob's key is called **private key**.
+Now let us assume Bob also has a padlock. The solution becomes:
+* Bob sends his padlock to Alice (but keeps the key)
+* Alice places the document in the box and locks it with Bob's padlock
+* Bob receives the box and can unlock it.
 
+In this example, Bob's padlock is called a **public key** and Bob's key is called a **private key**.
+
+{% comment }
 [TBC]
 Now let us equip the box with two locks and let us give a distinct padlock to each of Alice and Bob. Alice and Bob each have their own key for their own padlock. The process becomes:
 * Alice places the document in the box, locks it with her padlock and sends to Bob
@@ -22,6 +28,7 @@ Now let us equip the box with two locks and let us give a distinct padlock to ea
 * Bob receives the box again, this time with only his padlock, and can open it
 
 This way, anyone intercepting the box at any time would be unable to open it.
+{% endcomment }
 
 # Brush up on prime numbers
 
