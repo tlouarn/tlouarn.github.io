@@ -1,6 +1,6 @@
 ---
-title: RSA encryption
-subtitle: The mathematics behind the pioneer of public-key encryption.
+title: RSA encryption explained
+subtitle: The mathematics behind the classic public-key encryption algorithm.
 tags: algorithm
 ---
 
