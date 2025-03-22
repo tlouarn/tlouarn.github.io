@@ -46,13 +46,11 @@ It means that:
 * 15 and 3 have the same remainder when divided by 12 (3)
 * 12 is a divisor of their difference (15 - 3 = 12, which is a multiple of 12)
 
-In other words, although 15 and 3 are not equal in standard arithmetic, they are "equivalent" in **modular arithmetic**.
-
-Formally, we write $$a$$ is congruent to $$b$$ mod $$p$$ as follows:
+In other words, although 15 and 3 are not equal in standard arithmetic, they are "equivalent" in **modular arithmetic**. Formally, we write $$a$$ is congruent to $$b$$ mod $$p$$ as follows:
 
 \\[ a \equiv b \ (mod \ p) \\]
 
-The set of all numbers congruent to $$b \ (mod \ p)$$ can be expressed as:
+And we can express the set of all numbers congruent to $$b \ (mod \ p)$$ as:
 
 \\[ \{ a = b + k \cdot p \ | \ k \in \Z \} \\]
 
@@ -65,7 +63,7 @@ Fermat's **little theorem** states that if $$p$$ is a prime number and $$a$$ is 
 
 This theorem is only guaranteed to work when $$p$$ is a prime number. If $$p$$ is a composite number, the theorem may still hold but is not guaranteed (cf Carmichael numbers). 
 
-Let's try with $$p = 7$$ and $$a = 4$$: 
+Let us try with $$p = 7$$ and $$a = 4$$: 
 
 \\[ 4^{7 - 1} = 4096 \\]
 \\[ 4096 \ mod \ 7 = 1 \\]
@@ -74,17 +72,19 @@ Therefore, for every integer $$a < p$$, there is a **modular multiplicative inve
 
 # Euler's theorem 
 
-Euler's totient function, named **phi**, counts the positive integers up to a given integer $$n$$ that are coprime to $$n$$. We denote this function as $$\phi(n)$$.
+Euler's totient function, named **phi**, counts the positive integers up to a given integer $$n$$ that are coprime to $$n$$. We denote this function $$\phi(n)$$.
 
 In particular:
 * if $$n$$ is prime then $$\phi(n) = n - 1$$ (i.e. all numbers up to $$n$$ are coprime to $$n$$ since $$n$$ is prime)
 * if $$n$$ is semiprime and the product of prime numbers $$p$$ and $$q$$ then $$\phi(n) = (p-1) \times (q-1)$$
 
-Some examples:
+Let us look at some examples:
 * since $$7$$ is prime: $$\phi(7) = 7 - 1 = 6$$
-* since $$10$$ is semiprime and its prime factorization is $$2 * 5$$: $$\phi(10) = (2 - 1) \times (5 - 1) = 4$$
+* since $$10$$ is semiprime and its prime factorization is $$2 \cdot 5$$: $$\phi(10) = (2 - 1) \times (5 - 1) = 4$$
 
-Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). It states that if $$a$$ and $$n$$ are coprime then $$a ^ {\phi(n)}$$ is congruent to 1 modulo $$n$$:
+Now that we understood the $$\phi(n)$$ function, let us introduce Euler's theorem. Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). 
+
+It states that if $$a$$ and $$n$$ are coprime then $$a ^ {\phi(n)}$$ is congruent to 1 modulo $$n$$:
 
 \\[ a ^ {\phi(n)} \equiv 1 \ (mod \ n) \\]
 
