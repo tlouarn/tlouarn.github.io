@@ -1,10 +1,9 @@
 ---
 title: Tags
 layout: page
+tags: test test2
 ---
 
-{% for tag in site.tags %}
+{%- for tag in page.tags -%}
     <a href="/tags#{{ tag }}" class="tag">{{ tag }}</a> |
-{% endfor %}
-
-
+{%- endfor -%}
