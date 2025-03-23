@@ -25,7 +25,7 @@ In other words, although 15 and 3 are not equal in standard arithmetic, they are
 
 \\[ a \equiv b \ (mod \ p) \\]
 
-The set of all numbers congruent to $$b \ (mod \ p)$$ is $$b + k \cdot p \ \vert \ k in \Z $$
+The set of all numbers congruent to $$b \ (mod \ p)$$ is $$b + k \cdot p \ \vert \ k \ in \ \Z $$
 
 # Fermat's little theorem
 
