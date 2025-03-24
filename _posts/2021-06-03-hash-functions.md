@@ -30,9 +30,9 @@ SHA-256 is an **asymetric** hash function. Given the input "Hello World", it can
 
 If you try to slightly amend the input, for instance by changing only one letter, and run the code again, you will realize the output is radically different. Still the same length, obviously, but a completely different sequence of characters. This is the **avalanche effect**: similar but not identital inputs should produce radically different outputs. A good hash function generates an output which is statistically indistinguishable from random.
 
-If one cannot predict the output, and if the number of possible inputs is infinite, how can we be so sure that there are no two inputs somewhere that have nothing in common except that, against all odds, they generate the same output? The answer is simple: we don't. Such inputs would create a **collision**. We assume the hash functions we use are **collision-resistant** but there is no way to formally prove it. Furthermore, a good hash function should have a uniform distribution of hash values across the output space to avoid clustering.
+If one cannot predict the output, and if the number of possible inputs is infinite, how can we be so sure that there are no two inputs somewhere that have nothing in common except that, against all odds, they generate the same output? The answer is simple: we don't. Such inputs would create a **collision**. We assume the hash functions we use are **collision-resistant** but there is no way to formally prove it. That is why a good hash function should have a uniform distribution of hash values across the output space to avoid clustering.
 
-A good hash function should be computationally efficient. For instance, the above Python code runs in well under a second on a standard computer (and we know Python is slow).
+Finally, a good hash function should be computationally efficient. For instance, the above Python code runs in well under a second on a standard computer (and we know Python is slow).
 
 To summarize, a hash function is **deterministic**, **non-reversible**, **collision-resistant**, **unpredictable** and **fast**.
 
