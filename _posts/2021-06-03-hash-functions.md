@@ -26,7 +26,7 @@ print(hash_value)
 
 You can run the code on your side and you will find the exact same output. We say that the hash function is **deterministic** since the same input will always give the same output.
 
-SHA-256 is an **asymetric** hash function. Given the input "Hello World", it can quickly compute the corresponding hash. But given a hash, it cannot recompute the original input. There is no such function as `sha256_reverse()`. We say that the hash function is **non-reversible** or **one-way**. The only way to try to find the input for a given output is to try all the possible inputs one by one, which is infinite.
+SHA-256 is an **asymetric** hash function. Given the input "Hello World", it can quickly compute the corresponding hash. But given a hash, it cannot recompute the original input. There is no such function as `sha256_reverse()`. We say that the hash function is **non-reversible** or **one-way**. The only way to solve the input for a given output is to try all the possible inputs one by one, which is infinite.
 
 If you try to slightly amend the input, for instance by changing only one letter, and run the code again, you will realize the output is radically different. Still the same length, obviously, but a completely different sequence of characters. This is the **avalanche effect**: similar but not identital inputs should produce radically different outputs. A good hash function generates an output which is statistically indistinguishable from random.
 
