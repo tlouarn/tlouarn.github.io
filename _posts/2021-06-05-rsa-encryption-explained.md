@@ -17,15 +17,13 @@ Two distinct numbers are **coprime** if they have no other common factor than 1.
 
 # Modulus and congruence
 
-Let us imagine a clock that shows the hours 1 to 12. If it is 10 o'clock now and one adds 5 hours, what time will it be? Well, 10 + 5 = 15 but the clock only goes to 12, after which it wraps around to 3. We see that 15 and 3 are kind of the same thing but not really. We say that **3 and 15 are congruent modulo 12**. 
-
-It means that  15 and 3 have the same remainder when divided by 12 - which is 3 -. It also means that 12 is a divisor of their difference (15 - 3 = 12, which is a multiple of 12)
+Let us imagine a clock that shows the hours 1 to 12. If it is 10 o'clock now and one adds 5 hours, what time will it be? Well, 10 + 5 = 15 but the clock only goes to 12, after which it wraps around to 3. We see that 15 and 3 are kind of the same thing but not really. We say that **3 and 15 are congruent modulo 12**. It means that  15 and 3 have the same remainder when divided by 12 - which is 3. It also means that 12 is a divisor of their difference (15 - 3 = 12, which is a multiple of 12).
 
 In other words, although 15 and 3 are not equal in standard arithmetic, they are "equivalent" in **modular arithmetic**. Formally, we write $$a$$ is congruent to $$b$$ modulo $$p$$ as follows:
 
 \\[ a \equiv b \ (mod \ p) \\]
 
-The set of all numbers congruent to $$b \ (mod \ p)$$ is $$b + k \cdot p \ \vert \ k \ in \ \Z $$
+The set of all numbers congruent to $$b \ (mod \ p)$$ is $$\lbrace b + k \cdot p \ \vert \ k \ in \ \Z \rbrace$$
 
 # Fermat's little theorem
 
@@ -51,7 +49,7 @@ Let us look at some examples:
 * since $$7$$ is prime: $$\phi(7) = 7 - 1 = 6$$
 * since $$10$$ is semiprime and its prime factorization is $$2 \cdot 5$$: $$\phi(10) = (2 - 1) \times (5 - 1) = 4$$
 
-Now that we understood the $$\phi(n)$$ function, let us introduce Euler's theorem. Euler's theorem is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). It states that if $$a$$ and $$n$$ are coprime then $$a ^ {\phi(n)}$$ is congruent to 1 modulo $$n$$:
+**Euler's theorem** is a generalization of Fermat's little theorem to all numbers $$p$$ (prime or not). It states that if $$a$$ and $$n$$ are coprime then $$a ^ {\phi(n)}$$ is congruent to 1 modulo $$n$$:
 
 \\[ a ^ {\phi(n)} \equiv 1 \ (mod \ n) \\]
 
@@ -59,21 +57,13 @@ In the case where $$n$$ is a prime number, we know that $$\phi(n) = n-1$$ and we
 
 # RSA encryption
 
-Let's now come back to our encryption problem.
+Let's now come back to our encryption problem. RSA encryption involves a **public key** used to cipher a message **M** into **C** and a **private key** used to decipher **C** back into **M**.
 
-In order to come up with the keys, Bob chooses two distinct prime numbers $$p$$ and $$q$$ and computes $$n = p \cdot q$$. $$n$$ is semiprime so $$\phi = (p-1) * (q-1)$$ (i.e. there are $$(p-1) * (q-1)$$ totients $$e$$ that are coprime to $$n$$). Bob chooses one totient $$e$$ and computes its modular multiplicative inverse $$d$$ so that $$e \cdot d \equiv 1 \ (mod \ n)$$. Bob then broadcasts his public key $$(e, n)$$ and keeps his private key $$(d, n)$$ to himself.
+In order to come up with the keys, Bob chooses two distinct prime numbers $$p$$ and $$q$$ and computes $$n = p \cdot q$$. Since both $$p$$ and $$q$$ are prime, $$n$$ is semiprime so $$\phi = (p-1) * (q-1)$$ which means there are $$(p-1) * (q-1)$$ totients $$e < n$$ that are coprime to $$n$$. Bob chooses one totient $$e$$. The totient $$e$$ has to be coprime to $$n$$ so that there is a modular multiplicative invrse. Bob computes the modular multiplicative inverse $$d$$ so that $$e \cdot d \equiv 1 \ (mod \ n)$$. Bob then broadcasts his public key $$(e, n)$$ and keeps his private key $$(d, n)$$ to himself.
 
-The totient $$e$$ has to be coprime to $$n$$ so that there is a modular multiplicative inverse. Finding the modular multiplicative inverse 
-
-Alice wants to encrypt a message $$M$$ made of one letter (actually, a number representing the letter, like its ASCII code).
-
-To do so, Alice computes the encrypted message $$C$$ like so: $$C = M ^ e \ (mod \ n)$$ and sends it to Bob.
-
-Bob receives $$C$$ and computes $$C ^ d \ (mod \ n)$$ which is equal to $$M$$.
+Alice wants to encrypt a message $$M$$ made of one number. To do so, Alice computes the encrypted message $$C = M ^ e \ (mod \ n)$$ and sends it to Bob. Bob receives $$C$$ and computes $$M^\prime = C ^ d \ (mod \ n)$$ which is equal to $$M$$. Both encryption and decryption involve raising a number by a specific exponent so that the two operations cancel each other.
 
 Let's see why that works:
-
-In order to decrypt the message, Bob computes the decrypted message $$M^\prime$$ as follows:
 
 \\[ M^\prime = C ^ d \ (mod \ n) \\]
 
@@ -131,11 +121,8 @@ e = 5
 
 # Calculate d (the private exponent)
 # d is the modular multiplicative inverse of e modulo φ(n).
-# we want d x e ≡ 1 mod(phi(n))
-# (d * e) % φ(n) = 1
 # all solutions are in the form (173 + 216k) with k an integer (negative, positive or null)
 d = 173
-# brute_force or euclidean
 
 # Keys
 public_key = (247, 5)
@@ -147,38 +134,13 @@ ascii_msg = [ord(c) for c in msg]
 # [104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100]
 
 encrypted_msg = [i ** e % n for i in ascii_msg]
-# [130,43,166,166,232,223,123,232,95,166,237]
+# [130, 43, 166, 166, 232, 223, 123, 232, 95, 166, 237]
 
 decrypted_msg = [i ** d % n for i in encrypted_msg]
 decrypted_msg = ''.join(chr(i) for i in decrypted_msg)
 assert msg == decrypted_msg
 ```
 
-
-
-
-
-
-
-The key idea is that e×d≡1(modϕ(n))e×d≡1(modϕ(n)) ensures that encryption and decryption are inverse operations. This is why raising the ciphertext CC to the power of dd (using the private key) recovers the original plaintext message MM. This key property is the foundation for RSA to work. It ensures that encryption and decryption can undo each other.
-
-
-
-How many prime numbers do we know
-Prime estimate
-
-
-RSA is used in secure communications, including HTTPS, digital signatures, and secure email encryption.
-
-Quantum computing risk?
-
-So, in RSA, the relationship e×d≡1(modϕ(n))e×d≡1(modϕ(n)) ensures that the encryption and decryption processes are inverses of each other, and the exponentiation “loops back” to the original message when we decrypt.
-
-o factor nn, they would need to find pp and qq, and from there compute ϕ(n)ϕ(n), which is computationally infeasible for sufficiently large nn.
-
-Asymmetric encryption (two keys: public and private).
-    Prime numbers and modular arithmetic form the basis of RSA.
-    Public key for encryption and private key for decryption.
-    The security relies on the difficulty of factoring large numbers.
+The key ideas are that encryption is a one-way function (it is infeasible to compute the $$e-th$$ modular root of $$C$$ when the numbers are large) and that encryption and decryption are inverse operations. In order to find $$d$$, an attacker would need to know $$\phi(n)$$, which means knowing $$p$$ and $$q$$ from $$n$$, which is a prime factorization problem. For very large prime numbers (hundreds of digits), this is not feasible.
 
 RSA encryption is widely used in securing digital communications, such as in SSL/TLS protocols for web browsing and in digital signatures for authentication.
