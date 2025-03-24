@@ -19,9 +19,9 @@ In the following example, we consider an unordered array of integers from 1 to 1
 
 Note that when moving smaller and bigger elements, their relative order may change: we say that QuickSort is **not stable**.
 
-A simple way to partition would be to initialize three subsets, loop through the array and allocate each element to the correct subset. Such a function would do the job but would not be memory-efficient since we would use three intermediary lists and return the partitioned array in a new list.
+A simple way to partition would be to initialize three subsets, loop through the array and allocate each element to the correct subset. Such a function would do the job but would not be memory-efficient since it would use three intermediary lists and return the partitioned array in a new list.
 
-As you have probably guessed, we can be smarter than that and partition the array **in-place**, i.e. without creating new lists. To do so, we traverse the array once and swap elements so that all elements smaller than the pivot end up "towards the left" and all the elements bigger than the pivot end up "towards the right". We then put the pivot value at its correct position.
+As you have probably guessed, we can be smarter than that and partition the array **in-place**, that is without creating new lists. To do so, we traverse the array once and swap elements so that all elements smaller than the pivot end up "towards the left" and all the elements bigger than the pivot end up "towards the right". We then put the pivot value at its correct position.
 
 ```python
 def partition(array: list) -> None:
@@ -124,7 +124,7 @@ The average time complexity is therefore:
 
 \\[ O(n \cdot log(n)) \\]
 
-The worst time complexity happens when the array is already sorted. In that case, each pair of subset will be of type (\ 1 : n-1 \) and the array will have to be partitioned $$n$$ times.  The worst-case time complexity is therefore:
+The worst time complexity happens when the array is already sorted. In that case, each pair of subset will be of type $$[ 1 : n-1 ]$$ and the array will have to be partitioned $$n$$ times.  The worst-case time complexity is therefore:
 
 \\[ O(n2) \\]
 
