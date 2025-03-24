@@ -6,13 +6,13 @@ toc: true
 
 ![Implementing Domain-Driven Design](/assets/images/2021-06-03-implementing-domain-driven-design.jpg)
 
-Commonly referred to as the “Red Book of DDD”, Implementing Domain-Driven Design tackles practical implementations of the Domain-Driven approach to software engineering. Since the clearest way to expain coding principles is actual code, and DDD code being particularly clear, it makes for an excellent reading experience.
+Commonly referred to as the **Red Book of DDD**, Implementing Domain-Driven Design tackles practical implementations of the Domain-Driven approach to software engineering. Since the best way to explain coding principles is through actual code, and DDD code is especially clear, the book provides an excellent reading experience.
 
 The programming language used throughout the book is Java. This could have been a barrier to entry given my Python background, but it turned out to be relatively easy to grasp. Il also made for a very refreshing experience to be reading well-organized code in a statically-typed language.
 
 This post gathers some reading notes.
 
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 # Strategic Modeling vs Tactical Modeling
