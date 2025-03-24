@@ -12,7 +12,7 @@ Before we dive into QuickSort, we need to understand what is partitioning. Given
 
 In the following example, we consider an unordered array of integers from 1 to 10. We choose the first value as the pivot. We then rearrange the array so that the smaller values are on its left and the bigger values are on its right.
 
-![Partitioning a list of integers using its first element as the pivot](tlouarn-partitioning.svg)
+![Partitioning a list of integers using its first element as the pivot](assets/images/tlouarn-partitioning.svg)
 *Partitioning a list of integers using its first element as the pivot.*
 
 Note that when moving smaller and bigger elements, their relative order may change: we say that QuickSort is **not stable**.
