@@ -4,17 +4,15 @@ subtitle: Some definitions and a quick peek at SHA-256
 tags: algorithm
 ---
 
-A hash function transforms an arbitrary input of any size into a fixed-size output called "hash value" or simply "hash". 
+A **hash function** transforms an arbitrary input of any size into a unique fixed-size output called "hash value" or simply "hash". The input can be anything: a single letter, the complete works of Victor Hugo or the high-definition photograph of a supernova. No matter the input, the hash function will always spit an output of fixed length.
 
-Inputs can be anything: a single word, the complete works of Victor Hugo or the high-definition photograph of a supernova. No matter the input, the hash function will always spit an output of fixed length.
-
-Several hash functions have been designed by cryptographers. A commonly used one is SHA-256 which converts the input into a series of 256 bytes, usually represented as an hexadecimal string (4 bytes per characters gives a 64-long string). How many possible outputs is that? Well, 
+A commonly used hash function is SHA-256 which converts the input into a series of 256 bytes. It is possible to represent 256 bytes as a string of 64 hexadecimal characters (4 bytes per character). How many possible outputs is that? Well, 
 
 \\[ 2^{256} \approx 1.158 \cdot 10^{77} \\]
 
-With "only" 256 bytes, the output appears deceiptevely small. In reality, $$10^{77}$$ is an unfathomably high number. For comparison, scientists generally estimate there are around $$10^{80}$$ atoms in the visible universe.
+With "only" 256 bytes, the output appears deceptively small. In reality, $$10^{77}$$ is an unfathomably large number. For comparison, scientists generally estimate there are around $$10^{80}$$ atoms in the visible universe.
 
-Let's look at an example using Python and the SHA-256 hashing function:
+Let's look at SHA-256 in action using Python and the `hashlib` standard library:
 
 ```python
 from hashlib import sha256
