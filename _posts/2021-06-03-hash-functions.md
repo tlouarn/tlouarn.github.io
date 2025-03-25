@@ -6,7 +6,7 @@ tags: algorithm
 
 A **hash function** transforms an arbitrary input of any size into a unique fixed-size output called "hash value" or simply "hash". The input can be anything: a single letter, the complete works of Victor Hugo or the high-definition photograph of a supernova. No matter the input, the hash function will always spit an output of fixed length.
 
-A commonly used hash function is **SHA-256**, which converts the input into a series of 256 bytes, traditionally represented as a string of 64 hexadecimal characters (4 bytes per character). How many possible outputs is that?
+A commonly used hash function is **SHA-256**, which converts the input into a series of 256 bits, traditionally represented as a string of 64 hexadecimal characters (4 bits per character). How many possible outputs is that?
 
 \\[ 2^{256} \approx 1.158 \cdot 10^{77} \\]
 
