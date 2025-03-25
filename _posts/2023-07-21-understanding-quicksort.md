@@ -4,7 +4,7 @@ subtitle: A recursive implementation of the classic sorting algorithm using Pyth
 tags: algorithm python
 ---
 
-Quicksort is a divide-and-conquer sorting algorithm with an average time complexity of $$O(n \cdot log(n))$$ and a space complexity of $$O(1)$$. The list is traversed and rearranged recursively until each pivot value finds its correct position.
+Quicksort is a divide-and-conquer sorting algorithm with an average time complexity of $$O(n \log(n))$$ and a space complexity of $$O(log(n))$$. The list is traversed and rearranged recursively until each pivot value finds its correct position.
 
 # Partitioning
 
@@ -120,11 +120,7 @@ Let's first look at the time complexity. On average, the number of times the arr
 
 The worst time complexity happens when the array is already sorted. In that case, each pair of subset will be of type $$[ 1 : n-1 ]$$ and the array will have to be partitioned $$n$$ times. The worst-case time complexity is therefore $$O(n2)$$.
 
-When it comes to space complexity analysis, there are two things to consider:
-- the actual memory used for variables
-- the memory used by the call stack
-
-Regarding variables, the footprint is minimum since we swap all elements in-place. Therefore the complexity is $$O(1)$$. Regarding the call stack though, it is on average $$O(log(n))$$ since we need to divide the array $$log(n)$$ times, and it can be $$O(n)$$ in the worst case.
+When it comes to space complexity analysis, there are two things to consider: the actual memory used for variables and the memory used by the call stack. Regarding the first one, Quicksort's footprint is minimal since we swap all elements in-place (complexity of $$O(1)$$). Regarding the call stack though, the space complexity is on average $$O(log(n))$$ since we need to divide the array $$log(n)$$ times, and it can be $$O(n)$$ in the worst case.
 
 # Conclusion
 
