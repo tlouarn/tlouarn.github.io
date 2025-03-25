@@ -15,11 +15,8 @@ Below is the graph we will use throughout the article. It is unweighted, undirec
 
 # The adjacency matrix
 
-An adjacency matrix is a square matrix where `matrix[i][j]` represents the cost of moving from node `i` to node `j`. 
+An adjacency matrix is a square matrix where `matrix[i][j]` represents the cost of moving from node `i` to node `j`. If the graph is unweighted, we assume the default cost to be 1. So if nodes `i` and `j` are connected, `matrix[i][j] = 1`, otherwise `matrix[i][j] = 0`. If the graph is weighted, `matrix[i][j]` contains the weight of the edge. If the graph is undirected, i.e. all edges are bi-directional, the matrix is symmetric: each entry is equal to its transpose.
 
-If the graph is unweighted, we assume the default cost to be 1. So if nodes `i` and `j` are connected, `matrix[i][j] = 1`, otherwise `matrix[i][j] = 0`. If the graph is weighted, `matrix[i][j]` contains the weight of the edge.
-
-If the graph is undirected, i.e. all edges are bi-directional, the matrix is symmetric: each entry is equal to its transpose.
 | graph type | matrix characteristics |
 | --- | --- |
 | unweighted | filled with 0s and 1s |
