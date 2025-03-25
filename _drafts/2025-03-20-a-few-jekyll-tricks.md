@@ -36,6 +36,7 @@ https://stackoverflow.com/questions/19331362/using-an-image-caption-in-markdown-
 # Add support for math formulas
 
 Use KatEx
+Fix the header using z-index: 101 https://groups.google.com/g/mathjax-users/c/J6EAwLsx1z4?pli=1
 
 # A few changes to the CSS
 
