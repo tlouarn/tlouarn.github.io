@@ -1,6 +1,6 @@
 ---
 title: Modeling Graphs using Python
-subtitle: A Python implementation of the adjacency matrix and the adjacency list.
+subtitle: Introducing the adjacency matrix and the adjacency list.
 tags: programming python
 ---
 
