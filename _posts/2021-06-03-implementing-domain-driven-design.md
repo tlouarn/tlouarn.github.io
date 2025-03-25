@@ -8,7 +8,7 @@ toc: true
 
 Commonly referred to as the **Red Book of DDD**, Implementing Domain-Driven Design tackles practical implementations of the Domain-Driven approach to software engineering. Since the best way to explain coding principles is through actual code, and DDD code is especially clear, the book provides an excellent reading experience.
 
-The programming language used throughout the book is Java. This could have been a barrier to entry given my Python background, but it turned out to be relatively easy to grasp. Il also made for a very refreshing experience to be reading well-organized code in a statically-typed language.
+The programming language used throughout the book is Java. This could have been a barrier to entry given my Python background, but it turned out to be relatively easy to grasp. It also made for a very refreshing experience to be reading well-organized code in a statically-typed language.
 
 This post gathers some reading notes.
 
@@ -19,19 +19,19 @@ This post gathers some reading notes.
 
 * **Strategic Modeling** is an abstraction exercise where software engineers and domain experts gather and study the terminology used in a given Domain in order to uncover different Bounded Contexts, each Context having its own Ubiquitous Language.
 
-* By opposition, **Tactical Modeling** relies on a series of common coding recipes that could prove useful in implementing DDD. Typical recipes include Entities, Value Objects, Aggregates, Repositories etc. Using these coding patterns does not guarantee that the overall project will be properly modeled, but properly modeling the project will likely result in using these coding patterns.
+* In contrast, **Tactical Modeling** relies on a series of common coding recipes that could prove useful in implementing DDD. Typical recipes include Entities, Value Objects, Aggregates, Repositories etc. Using these coding patterns does not guarantee that the overall project will be properly modeled, but properly modeling the project will likely result in using these coding patterns.
 
 # Terminology matters
 
 * In Philosophy, a good starting point when writing an essay is to look at the etymology of the very words used in the subject and, from there, explore the spectrum of their meanings and gain insight on the relationships between concepts.
 
-* DDD follows the same approach: by focusing extensively on the words used in a given Domain, the hope is to also discover how the concepts interact together and use this as a foundation on which to write the actual code. In this respect, one can see software engineers as modern-days Socrates asking questions to Domain experts in order to extract and model their knowledge.
+* DDD follows the same approach: by focusing extensively on the words used in a given Domain, the goal is to discover how the concepts interact and use this understanding as a foundation for writing the actual code. In this respect, one can see software engineers as modern-days Socrates engaging with domain experts to extract and model their knowledge.
 
 # Bounded Contexts
 
 It’s okay to model the same concept using different objects as part of different Bounded Contexts.
 
-Taking the example of a book (this is my example, for illustration only):
+Consider the example of a book:
 
 * In the Bounded Context of a creative writing software, a book could be modeled as a collection of ideas and a temporary title
 * In the Bounded Context of a publisher’s database, a book could be modeled as a structured object with different types of content including a preface and a back cover as well as references to the people who helped finalize it
@@ -41,15 +41,15 @@ In all three cases it’s still a book, but seen through different Contexts and 
 
 # Immutability of Value Objects
 
-Value Objects are immutable objects where the attributes are protected by private setters and are validated and set by the constructor once and for all. Therefore the very existence of a Value Object guarantees that it is valid, which makes it much easier to rely on and to manipulate within the Application Layer.
+Value Objects are immutable. Their attributes are protected by private setters and are validated and set by the constructor once and for all. Therefore the very existence of a Value Object guarantees that it is valid, which makes it much easier to rely on and to manipulate within the Application Layer.
 
 # When to use Domain Services
 
 The very existence of Domain Services with logic in them could be the sign that Entities are Anemic, i.e. simple data storage objects with no logic in it, which is generally a bad practice.
 
-That being said, Domain services can be useful in specific cases:
+That said, Domain services can be useful in specific cases:
 * When an action/computation requires several Entities: instead of choosing which Entity to place the logic in and which Entity to inject, we can choose to write the logic in a separate Domain Service in which to inject both Entities.
-* When an action requires to look into a Repository: it is generally not recommended to access a Repository from an Aggregate, but it’s okay to do so from a Domain Service.
+* When an action requires to look into a Repository: it is generally not recommended to access a Repository from an Aggregate, but it is acceptable to do so from a Domain Service.
 
 # Two types of Repositories
 
