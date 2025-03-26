@@ -23,7 +23,13 @@ In other words, although 15 and 3 are not equal in standard arithmetic, they are
 
 \\[ a \equiv b \ (mod \ p) \\]
 
-The set of all numbers congruent to $$b \ (mod \ p)$$ is $$\lbrace b + k \cdot p \ \vert \ k \ in \ \Z \rbrace$$
+The set of all numbers congruent to $$b \ (mod \ p)$$ is $$\lbrace b + k \cdot p \ \vert \ k \ in \ \Z \rbrace$$.
+
+# Modular exponentiation
+
+**Modular exponentiation**, denoted as $$a^e \ mod \ n$$ involves raising a base $$a$$ to an exponent $$e$$ then taking the remainder when divided by a modulus $$n$$. Unlike traditional exponentiation which is invertible with logarithms, modular exponentiation introduces a cyclic and non-continuous structure which makes inversion impractical. In our example, solving for $$e$$ is computationally hard due to the discrete logarithm problem. From the original paper:
+
+> Although this problem of "computing eth roots modulo n without factoring n" is not a well-known difficult problem like factoring, we feel reasonably confident that it is computationally intractable.
 
 # Fermat's little theorem
 
