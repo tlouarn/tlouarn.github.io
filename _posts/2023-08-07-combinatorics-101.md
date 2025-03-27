@@ -1,6 +1,6 @@
 ---
 title: Combinatorics 101
-subtitle: An introduction to combinations and permutations.
+subtitle: Formulas for combinations and permutations.
 tags: probabilities
 ---
 
@@ -42,7 +42,7 @@ This is a tricky one.
     <p>
 
     \\[ 3^3 = 27 \\]
-    
+
     </p>
 </details>
 

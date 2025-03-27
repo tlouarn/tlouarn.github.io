@@ -41,6 +41,7 @@ Fix the header using z-index: 101 https://groups.google.com/g/mathjax-users/c/J6
 # A few changes to the CSS
 
 Very easy with Firefox Inspect. Check what properties are used to render a specific element, then change the css style.
+if css theme in remote repo, need to trigger a change in the main content to trigger a theme recomputation with the new css
 
 # Changing the font size
 
