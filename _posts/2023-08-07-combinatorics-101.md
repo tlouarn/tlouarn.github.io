@@ -22,7 +22,7 @@ We have a set of $$n$$ elements, we build an ordered list of $$k$$ elements chos
 
 # Permutation without repetition
 
-We have a set of $$n$$ elements, we build an ordered list of $$k$$ elements chosen among the set with no repetition allowed. For the first draw, we can choose among $$n$$ elements. For the second draw, we can choose among $$(n - 1)$$ elements. Etc. The resulting number of permutations is:
+We have a set of $$n$$ elements, we build an ordered list of $$k$$ elements chosen among the set with no repetition allowed. For the first draw, we can choose among $$n$$ elements. For the second draw, we can choose among $$(n - 1)$$ elements, etc. The resulting number of permutations is:
 \\[ P(n, k) = \frac{n!}{ (n-k)!} \\]
 
 # Combination without repetition
@@ -38,47 +38,61 @@ This is a tricky one.
 # Examples
 
 <details>
-  <summary>Number of ways the letters A, B and C can be arranged with repetitions</summary>
-  \\[ 3^3 = 27 \\]
+    <summary>Number of ways the letters A, B and C can be arranged with repetitions</summary>
+    <p>
+
+    \\[ 3^3 = 27 \\]
+    
+    </p>
 </details>
 
 <details>
   <summary>Number of ways the letters A, B and C can be arranged without repetition</summary>
+
   \\[ 3! = 6 \\]
+
 </details>
 
 <details>
   <summary>Probability of 3 heads in 5 coin flips</summary>
+
   10/32
+
 </details>
 
 <details>
   <summary>How many ways can first and second place be awarded to 10 people?</summary>
   Number of permutations without repetition of 2 in 10:
+
 \\[ \frac{10!}{(10 - 2)!} = 10 \times 9 = 90 \\]
+
 </details>
 
 
 <details>
   <summary>How many different ways can 3 red, 4 yellow and 2 blue bulbs be arranged in a string of Christmas tree lights with 9 sockets?</summary>
  We assume all bulbs are individually identified: there are a total of $$9!$$ permutations. We then divide by the number of permutations within each group of bulbs: 
+
 \\[ \frac{9!}{3! \times 4! \times 2!} = 1260 \\]
+
 </details>
 
 
 <details>
   <summary>How many different sets of 4 letters can be selected from the alphabet?</summary>
   We want the number of combinations without repetitions:
+
 \\[ {26 \choose 4} = \frac{26!}{4! \times (26-4)!} = 14950 \\]
+
 </details>
 
 <details>
   <summary>How many cups of ice-cream can we build by choosing 3 scoops among 5 flavors?</summary>
  This is a combination with repetition. The order of the scoops does not matter, and we can have several times the same flavor. The solution is:
+
 \\[ \frac{(5+3-1)!}{3! \times (5-1)!} = 35 \\]
+
 </details>
-
-
 
 ---
 
