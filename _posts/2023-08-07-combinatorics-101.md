@@ -39,59 +39,37 @@ This is a tricky one.
 
 <details>
     <summary>Number of ways the letters A, B and C can be arranged with repetitions</summary>
-    <p>
-
-    \\[ 3^3 = 27 \\]
-
-    </p>
+    <p>$$3^3 = 27$$</p>
 </details>
 
 <details>
-  <summary>Number of ways the letters A, B and C can be arranged without repetition</summary>
-
-  \\[ 3! = 6 \\]
-
+    <summary>Number of ways the letters A, B and C can be arranged without repetition</summary>
+    <p>$$3! = 6$$</p>
 </details>
 
 <details>
-  <summary>Probability of 3 heads in 5 coin flips</summary>
-
-  10/32
-
+    <summary>Probability of 3 heads in 5 coin flips</summary>
+    <p>$$10/32$$</p>
 </details>
 
 <details>
-  <summary>How many ways can first and second place be awarded to 10 people?</summary>
-  Number of permutations without repetition of 2 in 10:
-
-\\[ \frac{10!}{(10 - 2)!} = 10 \times 9 = 90 \\]
-
-</details>
-
-
-<details>
-  <summary>How many different ways can 3 red, 4 yellow and 2 blue bulbs be arranged in a string of Christmas tree lights with 9 sockets?</summary>
- We assume all bulbs are individually identified: there are a total of $$9!$$ permutations. We then divide by the number of permutations within each group of bulbs: 
-
-\\[ \frac{9!}{3! \times 4! \times 2!} = 1260 \\]
-
-</details>
-
-
-<details>
-  <summary>How many different sets of 4 letters can be selected from the alphabet?</summary>
-  We want the number of combinations without repetitions:
-
-\\[ {26 \choose 4} = \frac{26!}{4! \times (26-4)!} = 14950 \\]
-
+    <summary>How many ways can first and second place be awarded to 10 people?</summary>
+    <p>Number of permutations without repetition of 2 in 10: $$\frac{10!}{(10 - 2)!} = 10 \times 9 = 90$$</p>
 </details>
 
 <details>
-  <summary>How many cups of ice-cream can we build by choosing 3 scoops among 5 flavors?</summary>
- This is a combination with repetition. The order of the scoops does not matter, and we can have several times the same flavor. The solution is:
+    <summary>How many different ways can 3 red, 4 yellow and 2 blue bulbs be arranged in a string of Christmas tree lights with 9 sockets?</summary>
+    <p> We assume all bulbs are individually identified: there are a total of $$9!$$ permutations. We then divide by the number of permutations within each group of bulbs: $$\frac{9!}{3! \times 4! \times 2!} = 1260$$</p>
+</details>
 
-\\[ \frac{(5+3-1)!}{3! \times (5-1)!} = 35 \\]
+<details>
+    <summary>How many different sets of 4 letters can be selected from the alphabet?</summary>
+    <p>We want the number of combinations without repetitions: $${26 \choose 4} = \frac{26!}{4! \times (26-4)!} = 14950$$</p>
+</details>
 
+<details>
+    <summary>How many cups of ice-cream can we build by choosing 3 scoops among 5 flavors?</summary>
+    <p> This is a combination with repetition. The order of the scoops does not matter, and we can have several times the same flavor. The solution is: $$\frac{(5+3-1)!}{3! \times (5-1)!} = 35$$</p>
 </details>
 
 ---
