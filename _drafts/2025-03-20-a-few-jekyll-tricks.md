@@ -86,10 +86,12 @@ and in `_layouts/post.html':
 {% raw %}
 {%- if page.subtitle -%}<span class="post-subtitle"?>{{ page.subtitle }}</span>{%- endif -%}
 {% endraw %}
-``
+```
 
 # Making callout boxes
 
 https://github.com/just-the-docs/just-the-docs/issues/171#issuecomment-538794741
 
 # Auto hyphens
+
+# Possibility to mix markdown and HTML (like the details/summary )
