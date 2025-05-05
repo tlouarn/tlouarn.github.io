@@ -4,7 +4,7 @@ subtitle: How to translate a WebSocket feed into a responsive UI
 tags: python ui
 ---
 
-In this article we will build a GUI for a live order book (bids and asks) in Python using PySide6. PySide is the official Python port of the popular Qt framework. For the data source, we will use a free Bitcoin order book feed provided by Bitfinex. You will learn how to transform a continuous flow of market data into a user-friendly visualization of the order book.
+This article examines design considerations for implementing a lightweight live order book GUI in Python using PySide6. PySide is the official Python port of the popular Qt framework. For the data source, we will use a free Bitcoin order book feed provided by Bitfinex.
 
 # Bitfinex API v2
 
@@ -36,13 +36,11 @@ Finally, we use **qasync** in order to integrate Qt's own event loop with asynci
 # UI considerations
 
 In terms of UI, we want the user to start and stop the connection with buttons. A button should always display an action rather than a status. We could imagine two buttons: **Start** and **Stop**. Since we do not want the user to start a system already started nor to stop a system already stopped, only one of these two buttons should be enabled at all times. In fact, we could probably use a single button which action changes depending on the state of the system. This is what we implemented using our own `ToggleButton` widget. One last subtlety: while the system is connecting or disconnecting, we temporarily disable the button and enable it again once the system is either fully connected or fully disconnected. This avoids clicking twice while the previous operation is still running.
-In terms of UI, we want the user to start and stop the connection with buttons. A button should always display an action rather than a status. We could imagine two buttons: **Start** and **Stop**. Since we do not want the user to start a system already started nor to stop a system already stopped, only one of these two buttons should be enabled at all times. In fact, we could probably use a single button which action changes depending on the state of the system. This is what we implemented using our own `ToggleButton` widget. One last subtlety: while the system is connecting or disconnecting, we temporarily disable the button and enable it again once the system is either fully connected or fully disconnected. This avoids clicking twice while the previous operation is still running.
 
 Qt provides a default design for its components but we want some degree of customization linked to the type of application we are building and the type of data we are handling. Among the questions to be asked are: What font should be used? What font size is optimal? How much spacing inside the cells? Should we right-align all numbers? How many decimals should be displayed? How to remove double borders (cell borders and table borders)? Thankfully, the Qt framework is customizable via its own CSS so we have provided our custom components with their own style sheets. In order to not make `main_window.py` too big, we have placed the button and the table classes in their own files, still in the `views` folder.
 
 # The result
 
-The result is a responsive, asynchronous and (hopefully) good-looking UI that shows a live Bitcoin order book. The user can start and stop the feed with a toggle button. Most importantly, the interface remains fully responsive in any possible state of the WebSocket connection. This allows for instance the user to resize the window while, in the background, the client is connecting to the feed or the view is updating the table.
 The result is a responsive, asynchronous and (hopefully) good-looking UI that shows a live Bitcoin order book. The user can start and stop the feed with a toggle button. Most importantly, the interface remains fully responsive in any possible state of the WebSocket connection. This allows for instance the user to resize the window while, in the background, the client is connecting to the feed or the view is updating the table.
 
 ![Live order book using Python](/assets/images/tlouarn-building-a-live-order-book-using-python.gif)
