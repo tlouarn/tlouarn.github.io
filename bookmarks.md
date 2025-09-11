@@ -13,6 +13,7 @@ layout: page
 
 [The Pricing of Options and Corporate Liabilities](https://www.cs.princeton.edu/courses/archive/fall09/cos323/papers/black_scholes73.pdf)
 
+[The Cross-Section of Expected Stock Returns](https://www.ivey.uwo.ca/media/3775518/the_cross-section_of_expected_stock_returns.pdf) - Eugene F. Fama and Kenneth R. French (1992)
 
 
 # Useful Links
