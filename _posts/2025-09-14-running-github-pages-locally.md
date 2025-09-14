@@ -60,7 +60,7 @@ gem 'github-pages', group: :jekyll_plugins
 
 This ensures your local Jekyll environment matches GitHub Pages exactly. The **github-pages** gem pins versions of Jekyll and all supported plugins so what you see locally is what you’ll get when GitHub builds your site.
 
-# 5. Update your .gitignore (Optional but Recommended)
+# 5. Update your .gitignore (optional but recommended)
 
 Since Docker will generate extra files (like `_site`), you may want to add them to your `.gitignore` file so they don’t clutter your commits. Example:
 
