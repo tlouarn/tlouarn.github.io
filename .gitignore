@@ -1,0 +1,4 @@
+docker-compose.yml
+_site/*
+Gemfile
+Gemfile.lock

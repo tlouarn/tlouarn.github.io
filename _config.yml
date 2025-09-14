@@ -60,3 +60,4 @@ minima:
 
 exclude:
   - README.md
+  - docker-compose.yml
