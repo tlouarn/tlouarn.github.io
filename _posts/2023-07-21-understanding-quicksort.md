@@ -4,7 +4,7 @@ subtitle: A recursive implementation of the classic sorting algorithm
 tags: algorithm python
 ---
 
-Quicksort is a divide-and-conquer sorting algorithm with an average time complexity of $$O(n \log(n))$$ and a space complexity of $$O(log(n))$$. The list is traversed and rearranged recursively until each pivot value finds its correct position.
+**Quicksort** is a divide-and-conquer sorting algorithm with an average time complexity of $$O(n \log(n))$$ and a space complexity of $$O(log(n))$$. The list is traversed and rearranged recursively until each pivot value finds its correct position.
 
 # Partitioning
 
