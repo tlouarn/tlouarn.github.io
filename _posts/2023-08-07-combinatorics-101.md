@@ -1,6 +1,6 @@
 ---
 title: Combinatorics 101
-subtitle: Formulas for combinations and permutations.
+subtitle: Essential formulas for permutations and combinations
 tags: probabilities
 ---
 

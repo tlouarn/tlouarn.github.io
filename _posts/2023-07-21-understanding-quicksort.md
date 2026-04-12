@@ -1,6 +1,6 @@
 ---
 title: Understanding Quicksort
-subtitle: A recursive implementation of the classic sorting algorithm using Python.
+subtitle: A recursive implementation of the classic sorting algorithm
 tags: algorithm python
 ---
 

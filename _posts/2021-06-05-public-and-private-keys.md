@@ -1,6 +1,6 @@
 ---
 title: Public and private keys
-subtitle: Meet Alice and Bob in their prime.
+subtitle: Meet Alice and Bob in their prime
 tags: algorithm
 ---
 

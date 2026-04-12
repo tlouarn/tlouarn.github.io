@@ -27,9 +27,11 @@ OP_CHECKSIG
 
 In plain English, it means: "whoever has a public key hash equal to `9d229...` and can digitally sign this message can spend the output".
 
+---
+
 References:
-* [https://www.coursera.org/learn/wharton-cryptocurrency-blockchain-introduction-digital-currency]
-* [https://www.coursera.org/learn/cryptocurrency]
-* [https://www.bitcoin.com/bitcoin.pdf]
-* [https://learnmeabitcoin.com/technical/p2pkh]
-* [http://royalforkblog.github.io/2014/11/20/txn-demo/]
+* [https://www.coursera.org/learn/wharton-cryptocurrency-blockchain-introduction-digital-currency]()
+* [https://www.coursera.org/learn/cryptocurrency]()
+* [https://www.bitcoin.com/bitcoin.pdf]()
+* [https://learnmeabitcoin.com/technical/p2pkh]()
+* [http://royalforkblog.github.io/2014/11/20/txn-demo/]()
