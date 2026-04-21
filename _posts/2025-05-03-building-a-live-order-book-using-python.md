@@ -4,17 +4,17 @@ subtitle: How to translate a WebSocket feed into a responsive UI
 tags: python ui
 ---
 
-This article examines design considerations for implementing a lightweight live order book GUI in Python using PySide6. PySide is the official Python port of the popular Qt framework. For the data source, we will use a free Bitcoin order book feed provided by Bitfinex.
+# Introduction
 
-# Bitfinex API v2
+This post examines design considerations for implementing a live order book GUI in Python using PySide6. **PySide** is the official Python port of the popular Qt framework. For the data source, we will use a free Bitcoin order book feed provided by **Bitfinex**.
 
-WebSockets is a communication protocol that operates over a single TCP connection and allows real-time data exchange between a client and a server. Unlike traditional HTTP requests, which are one-way and require constant polling for updates, WebSockets provide a persistent connection where both the client and the server can send data at any time.
+# Websockets
 
-In Python, the most commonly used package for WebSocket communication is **websockets**. This package is an asyncio-based library that supports both client and server WebSocket implementations. In this article we will use it to build a client.
+**WebSockets** is a communication protocol that operates over a single TCP connection and allows real-time data exchange between a client and a server. Unlike traditional HTTP requests, which are one-way and require constant polling for updates, WebSockets provide a persistent connection where both the client and the server can send data at any time.
 
-The Bitfinex API v2 gives access to a live Bitcoin order book via a WebSocket connection. The documentation of the **book** channel can be found [here](https://docs.bitfinex.com/reference/ws-public-books). Once connected to the WebSocket API, the client receives messages in the following order: first a snapshot of the current order book, then some updates to the order book (changes in prices and quantities of bids and asks). Once every 15 seconds, the client receives a heartbeat message to confirm that the connection is still open.
+In Python, the most commonly used package for WebSocket communication is `websockets`. This package is an asyncio-based library that supports both client and server WebSocket implementations.
 
-It is therefore the client's responsibility to maintain an internal representation of the order book and to update it accordingly with the messages received.
+The Bitfinex API v2 gives access to a live Bitcoin order book via a WebSocket connection. The documentation of the **book** channel can be found [here](https://docs.bitfinex.com/reference/ws-public-books). Once connected to the WebSocket API, the client receives messages in the following order: first a snapshot of the current order book, then some updates to the order book (changes in prices and quantities of bids and asks). Once every 15 seconds, the client receives a heartbeat message to confirm that the connection is still open. It is therefore the client's responsibility to maintain an internal representation of the order book and to update it accordingly with the messages received.
 
 # Design decisions
 
@@ -45,7 +45,7 @@ The result is a responsive, asynchronous and (hopefully) good-looking UI that sh
 
 ![Live order book using Python](/assets/images/tlouarn-building-a-live-order-book-using-python.gif)
 
-The final project can be found on my [GitHub](https://github.com/tlouarn/order-book/).
+The final project can be found on [my GitHub](https://github.com/tlouarn/order-book/).
 
 
 
